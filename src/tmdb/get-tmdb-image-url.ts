@@ -1,3 +1,4 @@
+import { isNumber } from '../numbers/is-number';
 import { ensureLeadingSlash } from '../urls/ensure-leading-slash';
 
 
@@ -13,18 +14,35 @@ export type TmdbLogoSize = typeof TmdbLogoSizes[number];
 export const TmdbProfileSizes = ['w45', 'w185', 'w342', 'original'] as const;
 export type TmdbProfileSize = typeof TmdbProfileSizes[number];
 
+export type TmdbImageSize
+  = TmdbPosterSize
+    | TmdbBackdropSize
+    | TmdbLogoSize
+    | TmdbProfileSize
+    | number;
+
+export type GetTmdbImageUrlOptions = {
+  baseUrl?: string;
+};
+
 
 const DefaultBaseUrl = 'https://image.tmdb.org/t/p/';
+
 
 /**
  * Given only the ID, return a full URL to an image file from TMDB.
  */
 export function getTmdbImageUrl(
   file: string | null | undefined,
-  size: TmdbPosterSize | TmdbBackdropSize | TmdbLogoSize | TmdbProfileSize = 'original',
-  opt?: { baseUrl?: string },
+  size: TmdbImageSize = 'original',
+  opt?: GetTmdbImageUrlOptions,
 ) {
-  return !file || file.trim() === ''
-    ? ''
-    : `${ opt?.baseUrl ?? DefaultBaseUrl }${ size }${ ensureLeadingSlash(file) }`;
+  if (!file || file.trim() === '') {
+    return '';
+  }
+
+  const baseUrl = opt?.baseUrl ?? DefaultBaseUrl;
+  const imgSize = isNumber(size) ? `w${ size }` : size;
+
+  return baseUrl + imgSize + ensureLeadingSlash(file);
 }

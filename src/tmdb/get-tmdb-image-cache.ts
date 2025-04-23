@@ -51,7 +51,7 @@ export class TmdbImageCache {
    * `placeholder` property set. If set, this can be used while the promise itself is
    * pending.
    */
-  public getImage(src: string, size?: string) {
+  public getImage(src: string, size?: string | number) {
     const requested = this.toParts(src, size);
     const available = this.getClosestInCache(requested.imageId, requested.numericSize);
 
@@ -133,7 +133,7 @@ export class TmdbImageCache {
   /**
    * Extracts the TMDB image ID, and requested resolution, from the provided arguments.
    */
-  protected toParts(src: string, size?: string) {
+  protected toParts(src: string, size?: string | number) {
     let numericSize = size ? fromTmdbImageSize(size) : undefined;
 
     const srcPieces = src.split('/');
