@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.2.1...@resee-movies/utils@0.3.0) (2025-04-23)
+
+### Features
+
+* introduced getAspectRatio to compute an X or Y opposite of an aspect ratio ([e217fc7](https://github.com/ReSee-Movies/web-work/commit/e217fc7f952fb855a7d14d040d8d5ec840114161))
+* tweaked the fromTmdbImageSize method to also support string integers that are not prefixed with a "w" ([7cabdaf](https://github.com/ReSee-Movies/web-work/commit/7cabdaf2c9e79831efe74d12f525e197aedb3007))
+* tweaked tmdb image utility methods to support numeric sizes (in addition to their prior "w" prefixed strings) ([72b19e4](https://github.com/ReSee-Movies/web-work/commit/72b19e4872ead18072ce21fb6942f2aa4dde2a7b))
+
+### Build System
+
+* rearranging packages directories of @resee-movies/utils and @resee-movies/eslint ([b7d202e](https://github.com/ReSee-Movies/web-work/commit/b7d202ee871d1d63b2ef5aaba54f686155e780e1))
+
 ## [0.2.1](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.2.0...@resee-movies/utils@0.2.1) (2025-04-22)
 
 ### Bug Fixes
