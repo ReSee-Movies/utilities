@@ -4,10 +4,10 @@ import { serializeQueryObject } from '../urls/query-serialization';
 
 export type DirectusFileDescriptor = {
   id                 : string;
-  filename_download? : string;
-  description?       : string;
-  height?            : number;
-  width?             : number;
+  filename_download? : string | null;
+  description?       : string | null;
+  height?            : number | null;
+  width?             : number | null;
 };
 
 // See https://docs.directus.io/reference/files.html#custom-transformations

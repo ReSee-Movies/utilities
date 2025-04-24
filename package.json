@@ -10,6 +10,7 @@
     "./dates/*": "./dist/dates/*.js",
     "./dom/*": "./dist/dom/*.js",
     "./geo/*": "./dist/geo/*.js",
+    "./images/*": "./dist/images/*.js",
     "./numbers/*": "./dist/numbers/*.js",
     "./objects/*": "./dist/objects/*.js",
     "./resee/*": "./dist/resee/*.js",

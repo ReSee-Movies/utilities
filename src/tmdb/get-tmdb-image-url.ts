@@ -1,4 +1,5 @@
 import { isNumber } from '../numbers/is-number';
+import { isObjectLike } from '../objects/is-object-like';
 import { ensureLeadingSlash } from '../urls/ensure-leading-slash';
 
 
@@ -25,6 +26,10 @@ export type GetTmdbImageUrlOptions = {
   baseUrl?: string;
 };
 
+export type TmdbFileDescriptor = {
+  filename : string | null | undefined;
+  width?   : TmdbImageSize;
+};
 
 const DefaultBaseUrl = 'https://image.tmdb.org/t/p/';
 
@@ -33,16 +38,32 @@ const DefaultBaseUrl = 'https://image.tmdb.org/t/p/';
  * Given only the ID, return a full URL to an image file from TMDB.
  */
 export function getTmdbImageUrl(
-  file: string | null | undefined,
-  size: TmdbImageSize = 'original',
-  opt?: GetTmdbImageUrlOptions,
+  file: TmdbFileDescriptor | string | null | undefined,
+  size?: TmdbImageSize,
+  opts?: GetTmdbImageUrlOptions,
 ) {
-  if (!file || file.trim() === '') {
+  if (!file) {
     return '';
   }
 
-  const baseUrl = opt?.baseUrl ?? DefaultBaseUrl;
-  const imgSize = isNumber(size) ? `w${ size }` : size;
+  let fileName: string | null | undefined;
+  let fileSize: string | number | undefined = undefined;
 
-  return baseUrl + imgSize + ensureLeadingSlash(file);
+  if (isObjectLike(file)) {
+    fileName = file.filename;
+    fileSize = file.width;
+  }
+  else {
+    fileName = file;
+  }
+
+  if (!fileName || fileName.trim() === '') {
+    return '';
+  }
+
+  fileSize = size ?? fileSize ?? 'original';
+
+  return (opts?.baseUrl ?? DefaultBaseUrl)
+    + (isNumber(fileSize) ? `w${ fileSize }` : fileSize)
+    + ensureLeadingSlash(fileName);
 }
