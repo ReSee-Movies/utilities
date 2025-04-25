@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.3.0...@resee-movies/utils@0.4.0) (2025-04-25)
+
+### Features
+
+* introduced several new image-related utility methods: getFirstAvailableImageFileDescriptor, getImageUrl, and normalizeImageFileDescriptor ([74cbd25](https://github.com/ReSee-Movies/web-work/commit/74cbd25fc4c5347da6ee1f485fefae0294ee796c))
+* the UiImg component now accepts a Directus file descriptor as a source, and will fill in other props accordingly ([5483c3d](https://github.com/ReSee-Movies/web-work/commit/5483c3d219eb622e2458d2bdec6999be259ad4d9))
+
 ## [0.3.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.2.1...@resee-movies/utils@0.3.0) (2025-04-23)
 
 ### Features
