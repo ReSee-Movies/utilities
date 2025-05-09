@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.4.0...@resee-movies/utils@0.4.1) (2025-05-09)
+
+### Miscellaneous Chores
+
+* update eslint dependencies ([87a45b8](https://github.com/ReSee-Movies/web-work/commit/87a45b8a343b76bcdef138d80b678dbf29f40c0c))
+* update test dependencies ([da3ce35](https://github.com/ReSee-Movies/web-work/commit/da3ce35e139f77097e6f4d34efad398d588221ae))
+
 ## [0.4.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.3.0...@resee-movies/utils@0.4.0) (2025-04-25)
 
 ### Features
