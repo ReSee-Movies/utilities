@@ -23,7 +23,6 @@
   "scripts": {
     "dev:prepare": "tsc",
     "prepare": "tsc",
-    "postinstall": "tsc",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch --coverage"
