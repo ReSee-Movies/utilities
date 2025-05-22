@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.4.1...@resee-movies/utils@0.5.0) (2025-05-22)
+
+### Features
+
+* introduce new object util method "hasKey" ([b63b121](https://github.com/ReSee-Movies/web-work/commit/b63b121cd9d8027b1ca9dd8376f2361fdfd0d9b6))
+
+### Build System
+
+* tidy up prepare and dev:prepare scripts ([45d7bf2](https://github.com/ReSee-Movies/web-work/commit/45d7bf22a10073ff48308243ab29f516bb747766))
+
 ## [0.4.1](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.4.0...@resee-movies/utils@0.4.1) (2025-05-09)
 
 ### Miscellaneous Chores
