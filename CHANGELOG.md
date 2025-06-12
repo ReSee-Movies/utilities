@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.5.0...@resee-movies/utils@0.5.1) (2025-06-12)
+
+### Miscellaneous Chores
+
+* updated Nuxt and Vue to latest ([778faf8](https://github.com/ReSee-Movies/web-work/commit/778faf85603eaed3a3ece6d842b23567ae550c4a)), closes [#26](https://github.com/ReSee-Movies/web-work/issues/26)
+* updated test & linting dependencies to latest ([e4116d3](https://github.com/ReSee-Movies/web-work/commit/e4116d3389bfe89c4e18eb44a14fb7c1d6b8832c)), closes [#26](https://github.com/ReSee-Movies/web-work/issues/26)
+
 ## [0.5.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.4.1...@resee-movies/utils@0.5.0) (2025-05-22)
 
 ### Features
