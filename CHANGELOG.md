@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.5.1...@resee-movies/utils@0.5.2) (2025-06-24)
+
+### Code Refactoring
+
+* moved createRecordSeoMeta into the utils package so it can be reused elsewhere ([ceae651](https://github.com/ReSee-Movies/web-work/commit/ceae6517fc839039e1d52d1556b007dca198e192))
+
 ## [0.5.1](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.5.0...@resee-movies/utils@0.5.1) (2025-06-12)
 
 ### Miscellaneous Chores
