@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.5.2...@resee-movies/utils@0.5.3) (2025-06-27)
+
+### Bug Fixes
+
+* changed the behaviour of the `getStartOfDay` and `getEndOfDay` utilities so that, by default, they take into account the timezone offset so when output to ISO string they line up with values created on the server ([a785c97](https://github.com/ReSee-Movies/web-work/commit/a785c97fefe4dc28590eb725daa462448cb46b81))
+
 ## [0.5.2](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.5.1...@resee-movies/utils@0.5.2) (2025-06-24)
 
 ### Code Refactoring
