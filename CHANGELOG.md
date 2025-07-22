@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.5.3...@resee-movies/utils@0.6.0) (2025-07-22)
+
+### Features
+
+* introduced new string utility method isSubstringOf ([b44edb3](https://github.com/ReSee-Movies/web-work/commit/b44edb381ca472f5a0d8576d28fdbe00f7d1288a))
+
+### Miscellaneous Chores
+
+* dependency updates ([2f51d44](https://github.com/ReSee-Movies/web-work/commit/2f51d44236beca879741a1b78b903a0c7bde7f97))
+
 ## [0.5.3](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.5.2...@resee-movies/utils@0.5.3) (2025-06-27)
 
 ### Bug Fixes
