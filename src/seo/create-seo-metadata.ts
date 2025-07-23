@@ -6,7 +6,9 @@ import { getImageUrl } from '../images/get-image-url';
 export type CreateSeoMetadataOptions = {
   imagePath?  : ImageFileDescriptor;
   titleField? : string | string[];
+  title?      : string;
   descField?  : string;
+  desc?       : string;
   jsonLD?     : string | object;
 };
 
@@ -32,13 +34,26 @@ export function createSeoMetadata(
     return result;
   }
 
-  const titleField = config.titleField ?? 'title';
+  let title: string | undefined;
+  let desc: string | undefined;
 
-  const title = Array.isArray(titleField)
-    ? titleField.map((key) => record[key]).join(' ')
-    : record[titleField];
+  if (config.title) {
+    title = config.title;
+  }
+  else {
+    const titleField = config.titleField ?? 'title';
 
-  const desc = record[config.descField ?? 'description'];
+    title = Array.isArray(titleField)
+      ? titleField.map((key) => record[key]).join(' ')
+      : String(record[titleField]);
+  }
+
+  if (config.desc) {
+    desc = config.desc;
+  }
+  else {
+    desc = String(record[config.descField ?? 'description']);
+  }
 
   if (isString(title) && title.length) {
     result.title = title;
