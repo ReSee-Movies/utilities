@@ -45,10 +45,10 @@ export function getMediaAssetUrl(
   let query: undefined | URLSearchParams = undefined;
 
   if (isString(nameOrOptions)) {
-    path += `/${ nameOrOptions }`;
+    path += `/${ encodeURIComponent(nameOrOptions) }`;
   }
   else if (isObjectLike(fileIdOrDescriptor) && isString(fileIdOrDescriptor.filename_download)) {
-    path += `/${ fileIdOrDescriptor.filename_download }`;
+    path += `/${ encodeURIComponent(fileIdOrDescriptor.filename_download) }`;
   }
 
   if (isObjectLike(nameOrOptions)) {
