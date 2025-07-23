@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.6.0...@resee-movies/utils@0.6.1) (2025-07-23)
+
+### Styles
+
+* rearrange some pieces of the Live Event details view, and extend the usage of the useLiveEventName composable to other places where that value is used ([641508d](https://github.com/ReSee-Movies/web-work/commit/641508dee6158778234aeede4eb2ed2866b46d97))
+
 ## [0.6.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.5.3...@resee-movies/utils@0.6.0) (2025-07-22)
 
 ### Features
