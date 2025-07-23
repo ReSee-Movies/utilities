@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.6.1...@resee-movies/utils@0.6.2) (2025-07-23)
+
+### Bug Fixes
+
+* URI escape download filenames in the getMediaAssetUrl utility ([6cd5ee5](https://github.com/ReSee-Movies/web-work/commit/6cd5ee5ee84137da43e41efe9bf62a7e856c632c))
+
 ## [0.6.1](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.6.0...@resee-movies/utils@0.6.1) (2025-07-23)
 
 ### Styles
