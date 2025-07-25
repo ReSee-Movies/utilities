@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.6.2...@resee-movies/utils@0.7.0) (2025-07-25)
+
+### Features
+
+* modified the isString utility method to accept the optional argument `withContent` which extends the type check for content within the string ([18583d3](https://github.com/ReSee-Movies/web-work/commit/18583d325999df73b1e87fa163b2437c0dc4ace8))
+* modified the isSubstringOf utility method to accept the optional argument `simplified` which slugifies both strings to be compared so that special characters are ruled out ([6a203f7](https://github.com/ReSee-Movies/web-work/commit/6a203f71d38c03d140e6c581553a77e69b201638))
+
 ## [0.6.2](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.6.1...@resee-movies/utils@0.6.2) (2025-07-23)
 
 ### Bug Fixes
