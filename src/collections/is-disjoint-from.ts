@@ -1,4 +1,5 @@
 import { toSet, type Operand } from './to-set';
+import 'core-js/full/set/is-disjoint-from.js';
 
 /**
  * Takes two argument, `self` and `other`, and returns a boolean indicating if `self`

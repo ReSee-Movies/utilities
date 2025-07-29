@@ -1,4 +1,5 @@
-import { toSet, type Operand } from './to-set';
+import { type Operand, toSet } from './to-set';
+import 'core-js/full/set/difference.js';
 
 /**
  * Takes two argument, `self` and `other`, and returns a new object of the same type
