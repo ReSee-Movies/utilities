@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.7.0...@resee-movies/utils@0.7.1) (2025-07-29)
+
+### Bug Fixes
+
+* add core-js fallbacks for ES2025 Set methods ([dab32d0](https://github.com/ReSee-Movies/web-work/commit/dab32d0148e10a497f1da02b50ca5769c1256b71))
+
 ## [0.7.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.6.2...@resee-movies/utils@0.7.0) (2025-07-25)
 
 ### Features
