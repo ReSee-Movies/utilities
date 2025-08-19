@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.0](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.7.1...@resee-movies/utils@0.8.0) (2025-08-19)
+
+### Features
+
+* introduced new string hashing methods toSimpleHash and toCyrb64Hash ([b2b5e48](https://github.com/ReSee-Movies/web-work/commit/b2b5e483fbaacf70c2b7570cd701190cd6df1864))
+
+### Code Refactoring
+
+* moved more common live event logic (event "progress", e.g. "is it happening now") and blog post logic into utility methods ([f6e0541](https://github.com/ReSee-Movies/web-work/commit/f6e05414649d72145b77929859905078927bdd37))
+
 ## [0.7.1](https://github.com/ReSee-Movies/web-work/compare/@resee-movies/utils@0.7.0...@resee-movies/utils@0.7.1) (2025-07-29)
 
 ### Bug Fixes
