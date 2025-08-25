@@ -4,10 +4,10 @@
  * length, whichever is smaller.
  */
 export function getRandomEntries<T>(array: T[], targetCount = 1): T[] {
-  const result = new Array(0) as T[];
-  const taken = new Array(array.length) as number[];
+  const result: T[]     = new Array(0);
+  const taken: number[] = new Array(array.length);
 
-  let length = array.length;
+  let length    = array.length;
   let countdown = Math.min(array.length, targetCount);
 
   while (countdown--) {

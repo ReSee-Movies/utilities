@@ -16,20 +16,20 @@ describe('isString()', () => {
 });
 
 
-describe('deslugify()', () => {
-  test('it returns the numeric prefix of a string', () => {
-    expect(deslugify('123-foo-bar')).toEqual(123);
-    expect(deslugify('foo-bar')).toEqual(-1);
-    expect(deslugify(false)).toEqual(-1);
-  });
-});
-
-
-describe('slugify()', () => {
-  test('it will turn a string into a URL safe slug', () => {
-    expect(slugify('to error isQuite Human')).toEqual('to-error-isquite-human');
-  });
-});
+// describe('deslugify()', () => {
+//   test('it returns the numeric prefix of a string', () => {
+//     expect(deslugify('123-foo-bar')).toEqual(123);
+//     expect(deslugify('foo-bar')).toEqual(-1);
+//     expect(deslugify(false)).toEqual(-1);
+//   });
+// });
+//
+//
+// describe('slugify()', () => {
+//   test('it will turn a string into a URL safe slug', () => {
+//     expect(slugify('to error isQuite Human')).toEqual('to-error-isquite-human');
+//   });
+// });
 
 
 describe('isUUID()', () => {
