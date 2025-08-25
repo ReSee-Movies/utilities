@@ -1,6 +1,3 @@
-import { warn } from 'vue';
-
-
 /**
  * The primitive object types that can be serialized as URL query params.
  */
@@ -224,12 +221,10 @@ export function deserializeQueryValue<
     return true;
   }
 
-
   /* v8 ignore next 4 */
-  /* @ts-expect-error - `dev` is a Nuxt runtime property */
-  if (import.meta.dev) {
-    warn(`[deserializeQueryValue] Cannot convert the "${ typeof value }" value "${ value }" to type "${ type }"`);
-  }
+  // if (import.meta.dev) {
+  //   warn(`[deserializeQueryValue] Cannot convert the "${ typeof value }" value "${ value }" to type "${ type }"`);
+  // }
 
   return undefined;
 }

@@ -1,4 +1,4 @@
-import { isString } from '@resee-movies/utils/strings/is-string';
+import { isString } from '../strings/is-string';
 import { ImageFileDescriptor } from '../images/normalize-image-file-descriptor';
 import { getImageUrl } from '../images/get-image-url';
 

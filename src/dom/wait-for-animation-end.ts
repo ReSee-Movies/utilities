@@ -24,7 +24,7 @@ export async function waitForAnimationEnd(target: HTMLElement, fallbackTimeout: 
       return;
     }
 
-    let timeoutId: number | undefined = undefined;
+    let timeoutId: NodeJS.Timeout | number | undefined = undefined;
     let called = false;
 
     const complete = () => {

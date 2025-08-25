@@ -1,4 +1,4 @@
-import { isRef } from 'vue';
+import { isNumber } from '../numbers/is-number';
 import { isObjectLike } from '../objects/is-object-like';
 
 
@@ -16,5 +16,5 @@ export type LatLngPoint = {
  * Validate that the provided argument is an object with numeric `lat` and `lng` properties.
  */
 export function isLatLngPoint(value: unknown): value is LatLngPoint {
-  return isObjectLike(value) && !isRef(value) && typeof value.lat === 'number' && typeof value.lng === 'number';
+  return isObjectLike(value) && isNumber(value.lat) && isNumber(value.lng);
 }

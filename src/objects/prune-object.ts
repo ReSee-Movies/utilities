@@ -1,4 +1,3 @@
-import { toValue, type MaybeRefOrGetter } from 'vue';
 import { isObjectLike, type MaybeObjectLike, type KeyOf, type NotNullish, type ObjectLike } from './is-object-like';
 
 
@@ -10,11 +9,10 @@ export function pruneObject<
   T extends MaybeObjectLike,
   K extends KeyOf<T>,
 >(
-  value: MaybeRefOrGetter<T>,
-  keys: K[],
-) {
-  const unwrapped = toValue(value);
-  const targetObj = (isObjectLike(unwrapped) ? unwrapped : {}) as NotNullish<T>;
+  value : T,
+  keys  : K[],
+): Omit<NotNullish<T>, K> {
+  const targetObj = (isObjectLike(value) ? value : {}) as NotNullish<T>;
   const resultObj = {} as ObjectLike;
 
   for (const key of Object.keys(targetObj)) {
