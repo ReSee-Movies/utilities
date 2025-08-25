@@ -1,0 +1,26 @@
+name: ci.yml
+
+on:
+  - push
+  - pull_request
+  - workflow_run
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: NPM Install & Test
+        run: |
+          npm ci
+          npm run test:coverage
+
+      - name: Report
+        uses: coverallsapp/github-action@v2
