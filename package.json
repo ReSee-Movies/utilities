@@ -1,5 +1,8 @@
 {
   "name": "@resee-movies/utilities",
+  "description": "An eclectic collection of methods used across ReSee Movie projects.",
+  "repository": "https://github.com/resee-movies/utilities",
+  "bugs": "https://github.com/resee-movies/utilities/issues",
   "version": "0.8.0",
   "files": [
     "./dist"
@@ -27,7 +30,8 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "test:all": "npm run lint && npm test"
   },
   "dependencies": {
     "@sindresorhus/slugify": "^2.2.1",
@@ -39,6 +43,9 @@
     "@types/node": "^24.3.0",
     "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.31.0",
+    "typedoc": "^0.28.11",
+    "typedoc-github-theme": "^0.3.1",
+    "typedoc-plugin-merge-modules": "^7.0.0",
     "typescript": "5.8.3",
     "typescript-eslint": "^8.40.0",
     "vitest": "^3.2.4"

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "plugin": ["typedoc-github-theme", "typedoc-plugin-merge-modules"],
+  "includeVersion": true,
+  "categorizeByGroup": true,
+  "entryPointStrategy": "expand",
+  "mergeModulesRenameDefaults": true,
+  "mergeModulesMergeMode": "project"
+}
