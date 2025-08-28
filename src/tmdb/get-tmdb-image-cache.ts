@@ -2,8 +2,8 @@ import { loadImage } from '../dom/load-image';
 import { isNumber } from '../numbers/is-number';
 import { isString } from '../strings/is-string';
 import { fromTmdbImageSize } from './from-tmdb-image-size';
-import { toTmdbImageSize } from './to-tmdb-image-size';
 import { getTmdbImageUrl } from './get-tmdb-image-url';
+import { toTmdbImageSize } from './to-tmdb-image-size';
 
 
 let cacheInstance: TmdbImageCache | undefined = undefined;
@@ -34,10 +34,18 @@ export class TmdbImageCacheResult extends Promise<string> {
 
 
 /**
- * The TmdbImageCache keeps track of images that have been downloaded from TMDB
- * at a given resolution. This provides a mechanism to immediately provide an
- * image asset when available, and then later upgrade it to a move high-resolution
- * version.
+ * The TmdbImageCache provides a mechanism to keep track of image URLs that have
+ * been downloaded from TMDB at specific resolutions. This allows for a few tricks
+ * to be performed, such as:
+ *
+ * - If already loaded, a lower-resolution image can be immediately displayed, while
+ *   its higher-resolution version downloads in the background.
+ * - If a higher-resolution image is already loaded, the loading of a lower resolution
+ *   image can be skipped entirely.
+ *
+ * Instances of this class can be made for whatever wacky purposes you can think up,
+ * but it is recommended to use the {@link getTmdbImageCache} utility method, which
+ * will always return the same singleton instance.
  */
 export class TmdbImageCache {
   protected cache: Map<string, number[]> = new Map();
@@ -51,7 +59,7 @@ export class TmdbImageCache {
    * `placeholder` property set. If set, this can be used while the promise itself is
    * pending.
    */
-  public getImage(src: string, size?: string | number) {
+  public getImage(src: string, size?: string | number): string | TmdbImageCacheResult {
     const requested = this.toParts(src, size);
     const available = this.getClosestInCache(requested.imageId, requested.numericSize);
 
@@ -89,7 +97,7 @@ export class TmdbImageCache {
    * Add the provided imageId at the given resolution to the cache, indicating that it
    * has already been downloaded and is available for use.
    */
-  protected addToCache(imageId: string, requestedSize: number) {
+  protected addToCache(imageId: string, requestedSize: number): void {
     const cacheValue = this.cache.get(imageId) ?? [];
 
     if (!cacheValue.includes(requestedSize)) {
@@ -104,7 +112,7 @@ export class TmdbImageCache {
    * image has already been loaded at the desired resolution or higher, then this
    * method returns a status of "available", otherwise a status of "required" is returned.
    */
-  protected getClosestInCache(imageId: string, requestedSize: number) {
+  protected getClosestInCache(imageId: string, requestedSize: number): { numericSize: number; imageId: string; status: string } | undefined {
     const cacheValue = this.cache.get(imageId);
 
     if (!cacheValue?.length) {
@@ -133,7 +141,7 @@ export class TmdbImageCache {
   /**
    * Extracts the TMDB image ID, and requested resolution, from the provided arguments.
    */
-  protected toParts(src: string, size?: string | number) {
+  protected toParts(src: string, size?: string | number): { numericSize: number; imageId: string } {
     let numericSize = size ? fromTmdbImageSize(size) : undefined;
 
     const srcPieces = src.split('/');

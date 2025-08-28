@@ -1,8 +1,14 @@
 import { isNumber } from '../numbers/is-number';
 import { isString } from '../strings/is-string';
 
+/**
+ * Config options for the {@link fromTmdbImageSize} utility method.
+ */
 export type FromTmdbImageSizeOptions = {
-  /* Causes the "original" image size to return undefined instead of POSITIVE_INFINITY. */
+  /**
+   * Causes the "original" image size to return undefined instead
+   * of POSITIVE_INFINITY.
+   */
   originalIsUndefined?: boolean;
 };
 
@@ -12,7 +18,7 @@ export type FromTmdbImageSizeOptions = {
  * constant is returned (so that it is always largest when sorted against a list of
  * other size values) by default, and for anything else undefined is returned.
  */
-export function fromTmdbImageSize(value: unknown, options?: FromTmdbImageSizeOptions) {
+export function fromTmdbImageSize(value: unknown, options?: FromTmdbImageSizeOptions): number | undefined {
   if (isNumber(value)) {
     return value;
   }

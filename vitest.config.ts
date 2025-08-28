@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitest/config';
+import { coverageConfigDefaults, defineConfig } from 'vitest/config';
 import { resolve } from 'node:path';
 
 
@@ -13,6 +13,7 @@ export default defineConfig({
     coverage: {
       provider : 'v8',
       reporter : ['html', ['lcov', { file: 'report.lcov' }]],
+      exclude  : ['docs/**', ...coverageConfigDefaults.exclude],
     },
   },
 
