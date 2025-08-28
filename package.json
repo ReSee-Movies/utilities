@@ -10,6 +10,7 @@
   "exports": {
     "./arrays/*": "./dist/arrays/*.js",
     "./collections/*": "./dist/collections/*.js",
+    "./config": "./dist/config.js",
     "./dates/*": "./dist/dates/*.js",
     "./dom/*": "./dist/dom/*.js",
     "./geo/*": "./dist/geo/*.js",
