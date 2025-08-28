@@ -1,11 +1,11 @@
+import { deslugify } from '@/strings/deslugify';
+import { humanize } from '@/strings/humanize';
+import { isString } from '@/strings/is-string';
+import { isUUID } from '@/strings/is-uuid';
+import { slugify } from '@/strings/slugify';
+import { toFormattedListString } from '@/strings/to-formatted-list-string';
+import { toTitleCase } from '@/strings/to-title-case';
 import { describe, expect, test } from 'vitest';
-import { deslugify } from '../src/strings/deslugify';
-import { humanize } from '../src/strings/humanize';
-import { isString } from '../src/strings/is-string';
-import { isUUID } from '../src/strings/is-uuid';
-import { slugify } from '../src/strings/slugify';
-import { toFormattedListString } from '../src/strings/to-formatted-list-string';
-import { toTitleCase } from '../src/strings/to-title-case';
 
 
 describe('isString()', () => {

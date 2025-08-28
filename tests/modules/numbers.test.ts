@@ -1,5 +1,5 @@
+import { toInteger } from '@/numbers/to-integer';
 import { describe, expect, test } from 'vitest';
-import { toInteger } from '../src/numbers/to-integer';
 
 describe('toInteger()', () => {
   test('it converts values to an integer when possible', () => {

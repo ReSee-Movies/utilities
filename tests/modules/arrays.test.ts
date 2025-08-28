@@ -1,10 +1,10 @@
-import { describe, expect, test } from 'vitest';
 import { areArraysEqual, AreArraysEqualOptions } from '@/arrays/are-arrays-equal';
 import { chunkArray } from '@/arrays/chunk-arrays';
 import { getRandomEntries } from '@/arrays/get-random-entries';
 import { getRandomEntry } from '@/arrays/get-random-entry';
 import { toArray } from '@/arrays/to-array';
 import { toNonNullableArray } from '@/arrays/to-non-nullable-array';
+import { describe, expect, test } from 'vitest';
 
 
 describe('areArrayEqual()', () => {

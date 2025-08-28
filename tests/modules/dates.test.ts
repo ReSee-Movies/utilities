@@ -1,5 +1,5 @@
+import { areDatesEqual } from '@/dates/are-dates-equal';
 import { describe, expect, test } from 'vitest';
-import { areDatesEqual } from '../src/dates/are-dates-equal';
 
 describe('areDatesEqual()', () => {
   test('it correctly identifies two dates that are the same year', () => {
