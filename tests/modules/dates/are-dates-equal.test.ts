@@ -1,7 +1,7 @@
 import { areDatesEqual } from '@/dates/are-dates-equal';
 import { describe, expect, test } from 'vitest';
 
-describe('areDatesEqual()', () => {
+describe('dates/areDatesEqual()', () => {
   test('it correctly identifies two dates that are the same year', () => {
     const dateA = new Date('1980-01-01T00:00:00Z');
     const dateB = new Date('1980-02-10T12:00:00Z');
