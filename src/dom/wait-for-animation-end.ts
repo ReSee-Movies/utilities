@@ -19,7 +19,10 @@
  */
 export async function waitForAnimationEnd(target: HTMLElement, fallbackTimeout: number = 500) {
   return new Promise<void>((resolve) => {
-    if (!window) {
+    try {
+      window;
+    }
+    catch {
       resolve();
       return;
     }

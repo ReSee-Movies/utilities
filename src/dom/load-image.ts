@@ -2,7 +2,7 @@
  * Load an image asset. In client environments, where `Image` is available, this
  * method will return a promise that resolves when the file is loaded (and decoded),
  * and rejects on any error encountered. In server environments, the value of `src`
- * is returned directly.
+ * is resolved immediately.
  */
 export function loadImage(src: string) {
   // If running in a server context, Image will not be defined.
@@ -10,7 +10,7 @@ export function loadImage(src: string) {
     if (Image) { /* No-op */ }
   }
   catch {
-    return src;
+    return Promise.resolve(src);
   }
 
   return new Promise<string>((resolve, reject) => {

@@ -20,6 +20,7 @@ export class Timer {
 
   public mark(format: false): number;
   public mark(format: true): string;
+  public mark(format?: undefined): number;
 
   public mark(format: boolean = false) {
     const value = performance.now() - this._start;

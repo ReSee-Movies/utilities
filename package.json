@@ -26,7 +26,7 @@
     "./urls/*": "./dist/urls/*.js"
   },
   "scripts": {
-    "dev:prepare": "tsc",
+    "dev": "tsc --watch",
     "prepare": "tsc",
     "lint": "eslint .",
     "test": "vitest run",
@@ -42,8 +42,10 @@
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "@types/node": "^24.3.0",
+    "@vitest/browser": "^3.2.4",
     "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.31.0",
+    "playwright": "^1.55.0",
     "typedoc": "^0.28.11",
     "typedoc-github-theme": "^0.3.1",
     "typedoc-plugin-merge-modules": "^7.0.0",
