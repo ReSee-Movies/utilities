@@ -19,20 +19,20 @@ export type ReseeUtilitiesRuntimeConstants = {
 
 const RuntimeConstants: ReseeUtilitiesRuntimeConstants = {
   tmdbImageBaseUrl  : 'https://image.tmdb.org/t/p/',
-  reseeImageBaseUrl : '',
+  reseeImageBaseUrl : '/assets/',
 };
 
 
 /**
  * Set one or more ReSee Utilities package global constants.
  */
-export function setReseeUtilityConstants(values: Partial<ReseeUtilitiesRuntimeConstants>): void;
+export function setReseeUtilityConstant(values: Partial<ReseeUtilitiesRuntimeConstants>): void;
 
-export function setReseeUtilityConstants<
+export function setReseeUtilityConstant<
   K extends keyof ReseeUtilitiesRuntimeConstants,
 >(key: K, value: ReseeUtilitiesRuntimeConstants[K]): void;
 
-export function setReseeUtilityConstants<
+export function setReseeUtilityConstant<
   K extends keyof ReseeUtilitiesRuntimeConstants,
 >(
   keyOrObject: K | Partial<ReseeUtilitiesRuntimeConstants>,
@@ -50,7 +50,7 @@ export function setReseeUtilityConstants<
 /**
  * Retrieve a ReSee Utilities package global constant.
  */
-export function getReseeUtilityConstants<
+export function getReseeUtilityConstant<
   K extends keyof ReseeUtilitiesRuntimeConstants,
 >(key: K): ReseeUtilitiesRuntimeConstants[K] {
   return RuntimeConstants[key];

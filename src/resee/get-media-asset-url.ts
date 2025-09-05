@@ -1,7 +1,13 @@
+import { getReseeUtilityConstant } from '../config';
 import { isObjectLike } from '../objects/is-object-like';
 import { isString } from '../strings/is-string';
 import { serializeQueryObject } from '../urls/query-serialization';
 
+/**
+ * The basic shape of an "Asset" record provided by the Directus CMS. This
+ * is not exhaustive of all properties, but specifically the ones that are
+ * useful for images.
+ */
 export type DirectusFileDescriptor = {
   id                 : string;
   filename_download? : string | null;
@@ -10,8 +16,13 @@ export type DirectusFileDescriptor = {
   width?             : number | null;
 };
 
-// See https://docs.directus.io/reference/files.html#custom-transformations
-export type AssetTransformConfig = {
+/**
+ * Config that can be provided to the Directus CMS for manipulating image
+ * assets.
+ *
+ * @see https://docs.directus.io/reference/files.html#custom-transformations
+ */
+export type MediaAssetTransformConfig = {
   fit?                : 'cover' | 'contain' | 'inside' | 'outside';
   width?              : number;
   height?             : number;
@@ -20,29 +31,33 @@ export type AssetTransformConfig = {
   format?             : 'auto' | 'jpg' | 'png' | 'webp' | 'tiff';
 };
 
-export type ToURLOptions = {
+/**
+ * Config options for the {@link getMediaAssetUrl} utility.
+ */
+export type GetMediaAssetUrlOptions = {
   download? : boolean;
   baseUrl?  : string;
-} & AssetTransformConfig;
-
-
-const DefaultBaseUrl = 'https://api.reseemovies.com/assets/';
+} & MediaAssetTransformConfig;
 
 
 /**
  * Generates a URL for fetching media assets from Directus.
  */
-export function getMediaAssetUrl(fileId: string, options?: ToURLOptions): string;
-export function getMediaAssetUrl(descriptor: DirectusFileDescriptor, options?: ToURLOptions): string;
-export function getMediaAssetUrl(fileId: string, friendlyName: string | null | undefined, options?: ToURLOptions): string;
+export function getMediaAssetUrl(fileId: string, options?: GetMediaAssetUrlOptions): string;
+export function getMediaAssetUrl(descriptor: DirectusFileDescriptor, options?: GetMediaAssetUrlOptions): string;
+export function getMediaAssetUrl(fileId: string, friendlyName: string | null | undefined, options?: GetMediaAssetUrlOptions): string;
 
 export function getMediaAssetUrl(
   fileIdOrDescriptor: string | DirectusFileDescriptor,
-  nameOrOptions?: string | null | ToURLOptions,
-  options?: ToURLOptions,
-) {
+  nameOrOptions?: string | null | GetMediaAssetUrlOptions,
+  options?: GetMediaAssetUrlOptions,
+): string {
   let path: string = isString(fileIdOrDescriptor) ? fileIdOrDescriptor : fileIdOrDescriptor.id;
   let query: undefined | URLSearchParams = undefined;
+
+  if (!isString(path, { withContent: true })) {
+    return '';
+  }
 
   if (isString(nameOrOptions)) {
     path += `/${ encodeURIComponent(nameOrOptions) }`;
@@ -63,5 +78,5 @@ export function getMediaAssetUrl(
 
   const queryString = query ? `?${ query.toString() }` : '';
 
-  return `${ baseUrl ?? DefaultBaseUrl }${ path }${ queryString }`;
+  return `${ baseUrl ?? getReseeUtilityConstant('reseeImageBaseUrl') }${ path }${ queryString }`;
 }

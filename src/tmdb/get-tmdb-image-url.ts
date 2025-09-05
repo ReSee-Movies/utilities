@@ -1,4 +1,4 @@
-import { getReseeUtilityConstants } from '../config';
+import { getReseeUtilityConstant } from '../config';
 import { isObjectLike } from '../objects/is-object-like';
 import { ensureLeadingSlash } from '../urls/ensure-leading-slash';
 import { toTmdbImageSize } from './to-tmdb-image-size';
@@ -97,7 +97,7 @@ export function getTmdbImageUrl(
 
   fileSize = size ?? fileSize ?? 'original';
 
-  return (opts?.baseUrl ?? getReseeUtilityConstants('tmdbImageBaseUrl'))
+  return (opts?.baseUrl ?? getReseeUtilityConstant('tmdbImageBaseUrl'))
     + toTmdbImageSize(fileSize)
     + ensureLeadingSlash(fileName);
 }

@@ -1,10 +1,10 @@
-import { getReseeUtilityConstants } from '@/config';
+import { getReseeUtilityConstant } from '@/config';
 import { getTmdbImageUrl } from '@/tmdb/get-tmdb-image-url';
 import { describe, expect, test } from 'vitest';
 
-describe('tmdb/getTmdbImageUrl', () => {
+describe('tmdb/getTmdbImageUrl()', () => {
   test('it will generate a URL to a TMDB image asset', () => {
-    const tmdbBase  = getReseeUtilityConstants('tmdbImageBaseUrl');
+    const tmdbBase  = getReseeUtilityConstant('tmdbImageBaseUrl');
     const filename  = '123.png';
     const width     = 'w342';
 
