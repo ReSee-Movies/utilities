@@ -80,10 +80,6 @@ export class TmdbImageCache {
       getTmdbImageUrl(imageId, toTmdbImageSize(numericSize)),
     );
 
-    if (isString(loadImageResult)) {
-      return loadImageResult;
-    }
-
     return new TmdbImageCacheResult((resolve, reject) => {
       loadImageResult.then(
         (url) => { this.addToCache(imageId, numericSize); resolve(url); },
@@ -144,10 +140,10 @@ export class TmdbImageCache {
   protected toParts(src: string, size?: string | number): { numericSize: number; imageId: string } {
     let numericSize = size ? fromTmdbImageSize(size) : undefined;
 
-    const srcPieces = src.split('/');
+    const srcPieces = src?.split('/') ?? [];
     const imageId   = srcPieces.at(-1);
 
-    if (!isString(imageId)) {
+    if (!isString(imageId, { withContent: true })) {
       throw new Error('A TMDB image ID is required.');
     }
 
