@@ -1,8 +1,11 @@
 import { isString } from '../strings/is-string';
-import { ImageFileDescriptor } from '../images/normalize-image-file-descriptor';
+import type { ImageFileDescriptor } from '../images/normalize-image-file-descriptor';
 import { getImageUrl } from '../images/get-image-url';
 
 
+/**
+ * Config options for the {@link createSeoMetadata} method.
+ */
 export type CreateSeoMetadataOptions = {
   imagePath?  : ImageFileDescriptor;
   titleField? : string | string[];
@@ -13,6 +16,12 @@ export type CreateSeoMetadataOptions = {
 };
 
 
+/**
+ * The object returned by the {@link createSeoMetadata} method;
+ * compatible with Unhead's `useHead` utility.
+ *
+ * @see https://unhead.unjs.io/
+ */
 export type CreateSeoMetadataReturn = {
   title   : string | undefined;
   meta    : { name: string; content: string }[];
@@ -21,8 +30,8 @@ export type CreateSeoMetadataReturn = {
 
 
 /**
- * Generates an object which can be used to create SEO metadata about the
- * provided argument.
+ * Extracts information from the argument object that can be useful for
+ * SEO metadata.
  */
 export function createSeoMetadata(
   record: Record<string, unknown> | null | undefined,
