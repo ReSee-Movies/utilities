@@ -10,7 +10,7 @@ export type IsSubstringOfOptions = {
 };
 
 /**
- * Tests is one string is a substring of another. By default, this performs
+ * Tests if one string is a substring of another. By default, this performs
  * a case-insensitive comparison. A case-sensitive comparison can be performed
  * by passing `caseSensitive: true` in the "options" argument. If `simplified: true`
  * is provided in the "options" argument, then the strings will first be slugified

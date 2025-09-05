@@ -3,7 +3,15 @@ import { describe, expect, test } from 'vitest';
 
 describe('strings/isString()', () => {
   test('it correctly identifies a string', () => {
-    expect(isString('Hello World')).toBe(true);
-    expect(isString('')).toBe(true);
+    expect(isString(null)).toEqual(false);
+    expect(isString(false)).toEqual(false);
+    expect(isString(123)).toEqual(false);
+
+    expect(isString('Hello World')).toEqual(true);
+    expect(isString('Hello World', { withContent: true })).toEqual(true);
+
+    expect(isString('')).toEqual(true);
+    expect(isString('', { withContent: true })).toEqual(false);
+    expect(isString('  ', { withContent: true })).toEqual(false);
   });
 });
