@@ -1,7 +1,8 @@
 import { getReseeUtilityConstant } from '../config';
 import { isObjectLike } from '../objects/is-object-like';
 import { isString } from '../strings/is-string';
-import { serializeQueryObject } from '../urls/query-serialization';
+import type { UrlQuerySerializableObject } from '../typings/url-query-serialization';
+import { serializeToSearchParams } from '../urls/serialize-to-search-params';
 
 /**
  * The basic shape of an "Asset" record provided by the Directus CMS. This
@@ -52,8 +53,11 @@ export function getMediaAssetUrl(
   nameOrOptions?: string | null | GetMediaAssetUrlOptions,
   options?: GetMediaAssetUrlOptions,
 ): string {
-  let path: string = isString(fileIdOrDescriptor) ? fileIdOrDescriptor : fileIdOrDescriptor.id;
-  let query: undefined | URLSearchParams = undefined;
+  let path      = isString(fileIdOrDescriptor) ? fileIdOrDescriptor : fileIdOrDescriptor.id;
+  let queryOpts = undefined as undefined | UrlQuerySerializableObject;
+  let query     = undefined as undefined | URLSearchParams;
+  let baseUrl   = undefined as undefined | string;
+
 
   if (!isString(path, { withContent: true })) {
     return '';
@@ -67,16 +71,19 @@ export function getMediaAssetUrl(
   }
 
   if (isObjectLike(nameOrOptions)) {
-    query = new URLSearchParams(serializeQueryObject(nameOrOptions, { removeUndefined: true }));
+    ({ baseUrl, ...queryOpts } = nameOrOptions);
   }
   else if (isObjectLike(options)) {
-    query = new URLSearchParams(serializeQueryObject(options, { removeUndefined: true }));
+    ({ baseUrl, ...queryOpts } = options);
   }
 
-  const baseUrl = query?.get('baseUrl');
-  query?.delete('baseUrl');
+  if (queryOpts) {
+    query = serializeToSearchParams(queryOpts, { toUrlSearchParams: true });
+  }
 
-  const queryString = query ? `?${ query.toString() }` : '';
-
-  return `${ baseUrl ?? getReseeUtilityConstant('reseeImageBaseUrl') }${ path }${ queryString }`;
+  return [
+    baseUrl ?? getReseeUtilityConstant('reseeImageBaseUrl'),
+    path,
+    (query ? `?${ query.toString() }` : ''),
+  ].join('');
 }
