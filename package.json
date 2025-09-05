@@ -28,6 +28,7 @@
   "scripts": {
     "dev": "tsc --watch",
     "prepare": "tsc",
+    "docs": "typedoc",
     "lint": "eslint .",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
