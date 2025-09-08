@@ -77,8 +77,9 @@ export function getMediaAssetUrl(
     ({ baseUrl, ...queryOpts } = options);
   }
 
-  if (queryOpts) {
+  if (queryOpts && Object.keys(queryOpts).length > 0) {
     query = serializeToSearchParams(queryOpts);
+    query = query.size ? query : undefined;
   }
 
   return [

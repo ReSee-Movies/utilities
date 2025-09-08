@@ -29,7 +29,9 @@ export type NormalizedFileDescriptor = {
  * ReSee applications into a single format that describes everything needed to
  * stitch a URL together for the asset.
  */
-export function normalizeImageFileDescriptor(descriptor: ImageFileDescriptor | null | undefined) {
+export function normalizeImageFileDescriptor(
+  descriptor: ImageFileDescriptor | null | undefined,
+): NormalizedFileDescriptor {
   const result: NormalizedFileDescriptor = {
     identifier   : undefined,
     description  : undefined,

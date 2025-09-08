@@ -15,7 +15,7 @@ export type GetImageUrlOptions = {
 export function getImageUrl(
   descriptor: ImageFileDescriptor | null | undefined,
   options?: GetImageUrlOptions,
-) {
+): string {
   const normalized = normalizeImageFileDescriptor(descriptor);
 
   if (!normalized.identifier) {
