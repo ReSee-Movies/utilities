@@ -1,3 +1,33 @@
+# Changelog
+
+## 0.9.0 (2025-09-08)
+
+### Features
+
+* added getIdFromSlug utility method, replacing the poorly named deslugify() ([3cc24ac](https://github.com/resee-movies/utilities/commit/3cc24ac70fe49fe717c04c50e6728ebf6b8b1730))
+* introduce new object util method "hasKey" ([5bcb3c6](https://github.com/resee-movies/utilities/commit/5bcb3c6a6d2d3d9a18f59f56011ce6f07a6b0055))
+* introduced getAspectRatio to compute an X or Y opposite of an aspect ratio ([e57bbcd](https://github.com/resee-movies/utilities/commit/e57bbcd7662201fe5a81a2738f2b9c15c8ef8490))
+* introduced new string hashing methods toSimpleHash and toCyrb64Hash ([00d16b3](https://github.com/resee-movies/utilities/commit/00d16b37dc56cb1de908df810bdb546b74d3eb71))
+* introduced new string utility method isSubstringOf ([e733c97](https://github.com/resee-movies/utilities/commit/e733c973fdf709a6808329655c4331fe49b60913))
+* introduced several new image-related utility methods: getFirstAvailableImageFileDescriptor, getImageUrl, and normalizeImageFileDescriptor ([3e215b5](https://github.com/resee-movies/utilities/commit/3e215b5a5fb3a15d2b7c0f1b7dcb115122dbe570))
+* introduced the /config module to separate out important values in the package that might be subject to change ([c009036](https://github.com/resee-movies/utilities/commit/c009036871826ff36f545951ef36d941d42ec0c9))
+* modified the isString utility method to accept the optional argument `withContent` which extends the type check for content within the string ([4390c69](https://github.com/resee-movies/utilities/commit/4390c69e21d7e0153e53b3aa394dd5cbebe1145b))
+* modified the isSubstringOf utility method to accept the optional argument `simplified` which slugifies both strings to be compared so that special characters are ruled out ([7e0512a](https://github.com/resee-movies/utilities/commit/7e0512a5e3ceb5936d567347574e5eebd6826a86))
+* the UiImg component now accepts a Directus file descriptor as a source, and will fill in other props accordingly ([19816e7](https://github.com/resee-movies/utilities/commit/19816e79057e4d2dbcb727df16deb4b9a7b996e5))
+* tweaked the fromTmdbImageSize method to also support string integers that are not prefixed with a "w" ([0ad8f93](https://github.com/resee-movies/utilities/commit/0ad8f93eb2df2c8a38580e87a0b74348ebb06fd7))
+* tweaked tmdb image utility methods to support numeric sizes (in addition to their prior "w" prefixed strings) ([ed3c86c](https://github.com/resee-movies/utilities/commit/ed3c86c83370fa0af33f3c97de9bfb6240fccdd9))
+
+### Bug Fixes
+
+* add core-js fallbacks for ES2025 Set methods ([c106a84](https://github.com/resee-movies/utilities/commit/c106a84cbbfd0a4da1634202a50f02750fe41b33))
+* added (re-added??) nanoid to dependencies ([28c57e4](https://github.com/resee-movies/utilities/commit/28c57e4565659b4659cc38d8d8b52fabf5fcc958))
+* added core-js back to lockfile ([e8f5013](https://github.com/resee-movies/utilities/commit/e8f501319fa9af87ea4aea35cd9cc82949720041))
+* changed the behaviour of the `getStartOfDay` and `getEndOfDay` utilities so that, by default, they take into account the timezone offset so when output to ISO string they line up with values created on the server ([bb501be](https://github.com/resee-movies/utilities/commit/bb501be7dc7424895f7c1cbb74dfee4cffa6ac78))
+* put back improperly deleted URL module ([45bd254](https://github.com/resee-movies/utilities/commit/45bd254834d4acf27b26bb216e22de1e83b25b90))
+* removed unused argument from `serializeToSearchParams` within the `getMediaAssetUrl` utility ([90d9f04](https://github.com/resee-movies/utilities/commit/90d9f04427ee6cca8d5289b2ab15f4f28fccd397))
+* update CI to load Playwright browser(s) ([f77393a](https://github.com/resee-movies/utilities/commit/f77393a330745a0d5128ee2f36ee2cc9119d0ec1))
+* URI escape download filenames in the getMediaAssetUrl utility ([efa7a52](https://github.com/resee-movies/utilities/commit/efa7a526b096b939055373d33b56d7ea4cdde370))
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
