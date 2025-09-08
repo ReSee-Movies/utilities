@@ -1,5 +1,4 @@
 import { formatAddress, type Address } from 'localized-address-format';
-import { intersection } from '../sets/intersection';
 
 export type AddressFormat0 = Address;
 
@@ -44,16 +43,7 @@ export function toFormattedAddress(parts: AddressFormat, options?: ToFormattedAd
  * properties of the AddressFormat0 type.
  */
 export function isAddressFormat0(parts: AddressFormat): parts is AddressFormat0 {
-  return intersection(
-    Object.keys(parts),
-    [
-      'addressLines',
-      'locality',
-      'administrativeArea',
-      'postalCountry',
-      'postalCode',
-    ],
-  ).length > 0;
+  return 'addressLines' in parts;
 }
 
 /**
@@ -61,16 +51,7 @@ export function isAddressFormat0(parts: AddressFormat): parts is AddressFormat0 
  * properties of the AddressFormat1 type.
  */
 export function isAddressFormat1(parts: AddressFormat): parts is AddressFormat1 {
-  return intersection(
-    Object.keys(parts),
-    [
-      'street_address',
-      'address_locality',
-      'address_region',
-      'address_country',
-      'postal_code',
-    ],
-  ).length > 0;
+  return 'street_address' in parts;
 }
 
 /**
