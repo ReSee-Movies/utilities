@@ -9,7 +9,6 @@
   ],
   "exports": {
     "./arrays/*": "./dist/arrays/*.js",
-    "./collections/*": "./dist/collections/*.js",
     "./config": "./dist/config.js",
     "./dates/*": "./dist/dates/*.js",
     "./dom/*": "./dist/dom/*.js",
@@ -19,6 +18,7 @@
     "./objects/*": "./dist/objects/*.js",
     "./resee/*": "./dist/resee/*.js",
     "./seo/*": "./dist/seo/*.js",
+    "./sets/*": "./dist/sets/*.js",
     "./strings/*": "./dist/strings/*.js",
     "./timers/*": "./dist/timers/*.js",
     "./tmdb/*": "./dist/tmdb/*.js",

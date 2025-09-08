@@ -1,5 +1,5 @@
 import { formatAddress, type Address } from 'localized-address-format';
-import { intersection } from '../collections/intersection';
+import { intersection } from '../sets/intersection';
 
 export type AddressFormat0 = Address;
 
