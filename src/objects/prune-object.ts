@@ -1,4 +1,4 @@
-import { isObjectLike, type MaybeObjectLike, type KeyOf, type NotNullish, type ObjectLike } from './is-object-like';
+import { isObjectLike, type MaybeObjectLike, type KeyOf, type NotNullish, type ObjectLike } from './is-object-like.js';
 
 
 /**

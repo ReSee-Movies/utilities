@@ -2,7 +2,7 @@ import {
   ImageFileDescriptor,
   NormalizedFileDescriptor,
   normalizeImageFileDescriptor,
-} from './normalize-image-file-descriptor';
+} from './normalize-image-file-descriptor.js';
 
 
 export type PossibleImageFileDescriptor

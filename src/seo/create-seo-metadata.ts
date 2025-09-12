@@ -1,6 +1,6 @@
-import { isString } from '../strings/is-string';
-import type { ImageFileDescriptor } from '../images/normalize-image-file-descriptor';
-import { getImageUrl } from '../images/get-image-url';
+import { isString } from '../strings/is-string.js';
+import type { ImageFileDescriptor } from '../images/normalize-image-file-descriptor.js';
+import { getImageUrl } from '../images/get-image-url.js';
 
 
 /**

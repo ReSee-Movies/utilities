@@ -1,5 +1,5 @@
-import { isString } from './is-string';
-import { slugify } from './slugify';
+import { isString } from './is-string.js';
+import { slugify } from './slugify.js';
 
 /**
  * Config options for the `isSubstringOf` utility.

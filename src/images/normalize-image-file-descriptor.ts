@@ -1,9 +1,9 @@
-import { isObjectLike } from '../objects/is-object-like';
-import { DirectusFileDescriptor } from '../resee/get-media-asset-url';
-import { isString } from '../strings/is-string';
-import { fromTmdbImageSize } from '../tmdb/from-tmdb-image-size';
-import { TmdbFileDescriptor } from '../tmdb/get-tmdb-image-url';
-import { isUrl } from '../urls/is-url';
+import { isObjectLike } from '../objects/is-object-like.js';
+import { DirectusFileDescriptor } from '../resee/get-media-asset-url.js';
+import { isString } from '../strings/is-string.js';
+import { fromTmdbImageSize } from '../tmdb/from-tmdb-image-size.js';
+import { TmdbFileDescriptor } from '../tmdb/get-tmdb-image-url.js';
+import { isUrl } from '../urls/is-url.js';
 
 
 export type ImageFileDescriptor

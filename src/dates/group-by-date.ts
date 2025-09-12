@@ -1,5 +1,5 @@
-import { areDatesEqual, type AreDatesEqualPrecision } from './are-dates-equal';
-import { toDate } from './to-date';
+import { areDatesEqual, type AreDatesEqualPrecision } from './are-dates-equal.js';
+import { toDate } from './to-date.js';
 
 /**
  * Given an array of objects that each contain a Date or parsable date-like property,

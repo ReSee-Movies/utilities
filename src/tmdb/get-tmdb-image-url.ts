@@ -1,7 +1,7 @@
-import { getReseeUtilityConstant } from '../config';
-import { isObjectLike } from '../objects/is-object-like';
-import { ensureLeadingSlash } from '../urls/ensure-leading-slash';
-import { toTmdbImageSize } from './to-tmdb-image-size';
+import { getReseeUtilityConstant } from '../config.js';
+import { isObjectLike } from '../objects/is-object-like.js';
+import { ensureLeadingSlash } from '../urls/ensure-leading-slash.js';
+import { toTmdbImageSize } from './to-tmdb-image-size.js';
 
 
 /**

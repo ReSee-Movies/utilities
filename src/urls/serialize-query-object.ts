@@ -1,5 +1,5 @@
 import type { UrlQuerySerializableObject, UrlQuerySerializedObject } from '../typings/url-query-serialization';
-import { serializeQueryValue } from './serialize-query-value';
+import { serializeQueryValue } from './serialize-query-value.js';
 
 
 /**

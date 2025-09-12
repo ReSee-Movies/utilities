@@ -1,4 +1,4 @@
-import { toTitleCase } from './to-title-case';
+import { toTitleCase } from './to-title-case.js';
 
 const HumanizeStringRegex = /(?<!^)(?:[-_]|((?<![-_])[A-Z](?=[a-z]))|((?<=[a-z])[A-Z]))/g;
 

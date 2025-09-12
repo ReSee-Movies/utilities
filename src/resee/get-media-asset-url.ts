@@ -1,8 +1,8 @@
-import { getReseeUtilityConstant } from '../config';
-import { isObjectLike } from '../objects/is-object-like';
-import { isString } from '../strings/is-string';
-import type { UrlQuerySerializableObject } from '../typings/url-query-serialization';
-import { serializeToSearchParams } from '../urls/serialize-to-search-params';
+import { getReseeUtilityConstant } from '../config.js';
+import { isObjectLike } from '../objects/is-object-like.js';
+import { isString } from '../strings/is-string.js';
+import type { UrlQuerySerializableObject } from '../typings/url-query-serialization.js';
+import { serializeToSearchParams } from '../urls/serialize-to-search-params.js';
 
 /**
  * The basic shape of an "Asset" record provided by the Directus CMS. This

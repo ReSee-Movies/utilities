@@ -1,5 +1,5 @@
 import type { UrlQuerySerializableObject } from '../typings/url-query-serialization';
-import { serializeQueryObject } from './serialize-query-object';
+import { serializeQueryObject } from './serialize-query-object.js';
 
 /**
  * Feeds to result of {@link serializeQueryObject} into a URLSearchParams instance.

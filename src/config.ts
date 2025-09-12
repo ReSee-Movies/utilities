@@ -6,7 +6,7 @@
  * @module
  */
 
-import { isObjectLike } from './objects/is-object-like';
+import { isObjectLike } from './objects/is-object-like.js';
 
 /**
  * Runtime constants can be set once and then used throughout this utilities

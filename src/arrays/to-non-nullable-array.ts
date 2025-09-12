@@ -1,4 +1,4 @@
-import { toArray } from './to-array';
+import { toArray } from './to-array.js';
 
 /**
  * Given value T, returns an array in which null and undefined values have been removed.

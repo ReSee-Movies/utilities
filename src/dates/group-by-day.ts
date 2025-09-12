@@ -1,5 +1,5 @@
-import { areSameDay } from './are-same-day';
-import { toDate } from './to-date';
+import { areSameDay } from './are-same-day.js';
+import { toDate } from './to-date.js';
 
 
 /**

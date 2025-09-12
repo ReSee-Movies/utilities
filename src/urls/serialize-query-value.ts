@@ -1,4 +1,4 @@
-import { toNonNullableArray } from '../arrays/to-non-nullable-array';
+import { toNonNullableArray } from '../arrays/to-non-nullable-array.js';
 import type {
   UrlQuerySerializableType,
   UrlQuerySerializableTypeToSerializedType,

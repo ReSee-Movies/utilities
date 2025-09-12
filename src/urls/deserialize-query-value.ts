@@ -1,6 +1,6 @@
-import { isNumber } from '../numbers/is-number';
-import { isString } from '../strings/is-string';
-import {
+import { isNumber } from '../numbers/is-number.js';
+import { isString } from '../strings/is-string.js';
+import type {
   UrlQuerySerializableConstructor,
   UrlQuerySerializableConstructorToType,
 } from '../typings/url-query-serialization';

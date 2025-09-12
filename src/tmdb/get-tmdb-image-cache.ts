@@ -1,9 +1,9 @@
-import { loadImage } from '../dom/load-image';
-import { isNumber } from '../numbers/is-number';
-import { isString } from '../strings/is-string';
-import { fromTmdbImageSize } from './from-tmdb-image-size';
-import { getTmdbImageUrl } from './get-tmdb-image-url';
-import { toTmdbImageSize } from './to-tmdb-image-size';
+import { loadImage } from '../dom/load-image.js';
+import { isNumber } from '../numbers/is-number.js';
+import { isString } from '../strings/is-string.js';
+import { fromTmdbImageSize } from './from-tmdb-image-size.js';
+import { getTmdbImageUrl } from './get-tmdb-image-url.js';
+import { toTmdbImageSize } from './to-tmdb-image-size.js';
 
 
 let cacheInstance: TmdbImageCache | undefined = undefined;

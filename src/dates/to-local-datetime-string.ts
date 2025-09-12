@@ -1,4 +1,4 @@
-import { toISOString } from './to-iso-string';
+import { toISOString } from './to-iso-string.js';
 
 
 /**

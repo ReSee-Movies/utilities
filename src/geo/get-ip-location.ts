@@ -1,4 +1,4 @@
-import type { LatLngPoint } from './is-lat-lng-point';
+import type { LatLngPoint } from './is-lat-lng-point.js';
 
 
 /**

@@ -1,9 +1,9 @@
-import {
+import type {
   UrlQueryDeserializedObject,
   UrlQuerySerializationMap,
   UrlQuerySerializedObject,
 } from '../typings/url-query-serialization';
-import { deserializeQueryValue } from './deserialize-query-value';
+import { deserializeQueryValue } from './deserialize-query-value.js';
 
 
 /**

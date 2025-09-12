@@ -1,6 +1,6 @@
-import { isObjectLike } from '../objects/is-object-like';
-import { isString } from '../strings/is-string';
-import { toFormattedAddress, type AddressFormat } from './to-formatted-address';
+import { isObjectLike } from '../objects/is-object-like.js';
+import { isString } from '../strings/is-string.js';
+import { toFormattedAddress, type AddressFormat } from './to-formatted-address.js';
 
 /**
  * Create a URL to Google Maps for a particular query term.

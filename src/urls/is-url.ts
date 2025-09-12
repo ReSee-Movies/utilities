@@ -1,4 +1,4 @@
-import { isString } from '../strings/is-string';
+import { isString } from '../strings/is-string.js';
 
 /**
  * Validates that the provided argument is either a URL instance,

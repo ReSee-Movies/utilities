@@ -1,4 +1,4 @@
-import { areArraysEqual } from '../arrays/are-arrays-equal';
+import { areArraysEqual } from '../arrays/are-arrays-equal.js';
 
 
 /**
