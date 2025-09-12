@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.1](https://github.com/resee-movies/utilities/compare/0.9.0...0.9.1) (2025-09-12)
+
+### Bug Fixes
+
+* internal imports ([8d54d40](https://github.com/resee-movies/utilities/commit/8d54d401386bbcaf529941d3bf558004692bc410))
+
 ## 0.9.0 (2025-09-08)
 
 ### Features
