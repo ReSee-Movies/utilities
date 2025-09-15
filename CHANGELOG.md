@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.2](https://github.com/resee-movies/utilities/compare/0.9.1...0.9.2) (2025-09-15)
+
+### Bug Fixes
+
+* clean dist directory of old files before building / packaging ([b2e0c01](https://github.com/resee-movies/utilities/commit/b2e0c0185cc6fad7ca9438a4c3fed40b926a2bd5))
+
 ## [0.9.1](https://github.com/resee-movies/utilities/compare/0.9.0...0.9.1) (2025-09-12)
 
 ### Bug Fixes
