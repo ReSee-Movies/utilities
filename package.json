@@ -29,8 +29,8 @@
     "./urls/*": "./dist/urls/*.js"
   },
   "scripts": {
-    "dev": "tsc --watch",
-    "prepare": "tsc",
+    "dev": "rm -rf ./dist && tsc --watch",
+    "prepare": "rm -rf ./dist && tsc",
     "release": "dotenv release-it --",
     "docs": "typedoc",
     "lint": "eslint .",
