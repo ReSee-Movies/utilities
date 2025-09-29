@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0](https://github.com/resee-movies/utilities/compare/0.9.2...0.10.0) (2025-09-29)
+
+### Features
+
+* introduce `toStableHash()` utility method ([9558f86](https://github.com/resee-movies/utilities/commit/9558f868470f180efedf6518d8063e8a43c96882))
+* introduce `toUrl()` utility method ([85bc425](https://github.com/resee-movies/utilities/commit/85bc42590f068b66e4b2d4147a77ceacd2320f9d))
+* introduce trigram utility methods ([7aa78d9](https://github.com/resee-movies/utilities/commit/7aa78d9a2978d4ccd378daa6820386c8f3858041))
+
 ## [0.9.2](https://github.com/resee-movies/utilities/compare/0.9.1...0.9.2) (2025-09-15)
 
 ### Bug Fixes
