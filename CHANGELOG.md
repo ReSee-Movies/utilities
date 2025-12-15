@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.11.0](https://github.com/resee-movies/utilities/compare/0.10.0...0.11.0) (2025-12-15)
+
+### Features
+
+* slugify supports optionally kebab-casing the result ([6780018](https://github.com/resee-movies/utilities/commit/67800183ae6e3e9108c7a9ac2dadbbcc14ed9a30))
+
 ## [0.10.0](https://github.com/resee-movies/utilities/compare/0.9.2...0.10.0) (2025-09-29)
 
 ### Features
