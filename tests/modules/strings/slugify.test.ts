@@ -7,6 +7,16 @@ describe('strings/slugify()', () => {
   });
 
   test('it will concatenate multiple strings', () => {
-    expect(slugify('to error', 23, true)).toEqual('to-error-23-true');
+    expect(slugify(['to error', 23, true])).toEqual('to-error-23-true');
+  });
+
+  test('it will ignore nullish inputs', () => {
+    expect(slugify(null)).toEqual('');
+    expect(slugify(undefined)).toEqual('');
+    expect(slugify([null, ' '])).toEqual('');
+  });
+
+  test('it can be used to kebab-case string values', () => {
+    expect(slugify('kebabCaseMe', { decamelize: true })).toEqual('kebab-case-me');
   });
 });
