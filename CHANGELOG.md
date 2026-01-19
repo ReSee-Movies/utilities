@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.12.0](https://github.com/resee-movies/utilities/compare/0.11.0...0.12.0) (2026-01-19)
+
+### Features
+
+* **toFormattedAddress:** support for normalizing an additional address object shape ([59ab9cb](https://github.com/resee-movies/utilities/commit/59ab9cb773624e78b9d52996e79b78e03521ee12))
+
 ## [0.11.0](https://github.com/resee-movies/utilities/compare/0.10.0...0.11.0) (2025-12-15)
 
 ### Features
