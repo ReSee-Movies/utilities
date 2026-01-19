@@ -12,7 +12,18 @@ export type AddressFormat1 = {
   postal_code?      : null | string;
 };
 
-export type AddressFormat = AddressFormat0 | AddressFormat1;
+export type AddressFormat2 = {
+  name?          : null | string;
+  organization?  : null | string;
+  street_number? : null | string;
+  route?         : null | string;
+  sublocality?   : null | string;
+  locality?      : null | string;
+  country?       : null | string;
+  postal_code?   : null | string;
+}
+
+export type AddressFormat = AddressFormat0 | AddressFormat1 | AddressFormat2;
 
 export type ToFormattedAddressOptions = {
   includeName?   : boolean;
@@ -40,7 +51,7 @@ export function toFormattedAddress(parts: AddressFormat, options?: ToFormattedAd
 
 /**
  * Type guard that identifies the provided object as containing the
- * properties of the AddressFormat0 type.
+ * properties of the {@link AddressFormat0} type.
  */
 export function isAddressFormat0(parts: AddressFormat): parts is AddressFormat0 {
   return 'addressLines' in parts;
@@ -48,10 +59,18 @@ export function isAddressFormat0(parts: AddressFormat): parts is AddressFormat0 
 
 /**
  * Type guard that identifies the provided object as containing the
- * properties of the AddressFormat1 type.
+ * properties of the {@link AddressFormat1} type.
  */
 export function isAddressFormat1(parts: AddressFormat): parts is AddressFormat1 {
   return 'street_address' in parts;
+}
+
+/**
+ * Type guard that identifies the provided object as containing the
+ * properties of the {@link AddressFormat2} type.
+ */
+export function isAddressFormat2(parts: AddressFormat): parts is AddressFormat2 {
+  return 'route' in parts;
 }
 
 /**
@@ -73,6 +92,14 @@ export function normalizeAddressParts(parts: AddressFormat): AddressFormat0 {
     normalized.administrativeArea = parts.address_region ?? undefined;
     normalized.postalCountry      = parts.address_country ?? undefined;
     normalized.postalCode         = parts.postal_code ?? undefined;
+  }
+  else if (isAddressFormat2(parts)) {
+    const streetAddress = [parts.street_number, parts.route].filter(Boolean).join(' ').trim();
+
+    normalized.addressLines  = streetAddress ? [streetAddress] : undefined;
+    normalized.locality      = parts.locality ?? undefined;
+    normalized.postalCountry = parts.country ?? undefined;
+    normalized.postalCode    = parts.postal_code ?? undefined;
   }
 
   return normalized;
