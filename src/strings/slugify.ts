@@ -1,5 +1,5 @@
 import SlugifyFn from '@sindresorhus/slugify';
-import { isString } from './is-string';
+import { isString } from './is-string.js';
 
 
 export type SlugifyValue = string | number | boolean | null | undefined | (string | number | boolean | null | undefined)[];

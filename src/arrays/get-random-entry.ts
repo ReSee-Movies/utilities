@@ -1,4 +1,4 @@
-import { getRandomInteger } from '../numbers/get-random-integer';
+import { getRandomInteger } from '../numbers/get-random-integer.js';
 
 /**
  * Returns a single random entry from the provided array.

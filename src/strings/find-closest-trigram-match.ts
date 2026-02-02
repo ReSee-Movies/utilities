@@ -1,6 +1,6 @@
-import { toStableHash } from '../objects/to-stable-hash';
-import { generateTrigram } from './generate-trigram';
-import { getTrigramSimilarity } from './get-trigram-similarity';
+import { toStableHash } from '../objects/to-stable-hash.js';
+import { generateTrigram } from './generate-trigram.js';
+import { getTrigramSimilarity } from './get-trigram-similarity.js';
 
 
 /**

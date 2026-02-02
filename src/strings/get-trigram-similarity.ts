@@ -1,5 +1,5 @@
-import { generateTrigram } from './generate-trigram';
-import { isString } from './is-string';
+import { generateTrigram } from './generate-trigram.js';
+import { isString } from './is-string.js';
 
 
 /**

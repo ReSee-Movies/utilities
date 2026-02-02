@@ -1,5 +1,5 @@
-import { isString } from '../strings/is-string';
-import { isUrl } from './is-url';
+import { isString } from '../strings/is-string.js';
+import { isUrl } from './is-url.js';
 
 /**
  * Ensures that the provided string is a valid URL.
