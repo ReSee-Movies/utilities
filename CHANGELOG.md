@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.12.1](https://github.com/resee-movies/utilities/compare/0.12.0...0.12.1) (2026-02-02)
+
+### Bug Fixes
+
+* imports ([04d0467](https://github.com/resee-movies/utilities/commit/04d0467b48e600bf43ed5365a6e78e3177134314))
+
 ## [0.12.0](https://github.com/resee-movies/utilities/compare/0.11.0...0.12.0) (2026-01-19)
 
 ### Features
