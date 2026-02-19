@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.12.2](https://github.com/resee-movies/utilities/compare/0.12.1...0.12.2) (2026-02-19)
+
+### Bug Fixes
+
+* **getImageUrl:** check for height/width being equal to the infinity constant, and make them undefined when so, so that the string literal "Infinity" does not get used in the generated query ([cd3e7bd](https://github.com/resee-movies/utilities/commit/cd3e7bdbc56eeef94c0705ffd3c44b723534ef7f))
+
 ## [0.12.1](https://github.com/resee-movies/utilities/compare/0.12.0...0.12.1) (2026-02-02)
 
 ### Bug Fixes
