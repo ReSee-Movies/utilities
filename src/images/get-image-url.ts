@@ -28,17 +28,22 @@ export function getImageUrl(
 
   if (normalized.sourceType === 'resee') {
     return getMediaAssetUrl(normalized.identifier, normalized.friendlyName, {
-      height  : normalized.height,
-      width   : normalized.width,
+      height  : removeInfinities(normalized.height),
+      width   : removeInfinities(normalized.width),
       baseUrl : options?.reseeBaseUrl,
     });
   }
 
   if (normalized.sourceType === 'tmdb') {
-    return getTmdbImageUrl(normalized.identifier, normalized.width, {
+    return getTmdbImageUrl(normalized.identifier, removeInfinities(normalized.width), {
       baseUrl: options?.tmdbBaseUrl,
     });
   }
 
   return '';
+}
+
+
+function removeInfinities(value: number | undefined) {
+  return value === Number.POSITIVE_INFINITY || value === Number.NEGATIVE_INFINITY ? undefined : value;
 }
