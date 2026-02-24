@@ -1,5 +1,6 @@
-import { coverageConfigDefaults, defineConfig } from 'vitest/config';
+import { playwright } from '@vitest/browser-playwright';
 import { resolve } from 'node:path';
+import { coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig({
   resolve: {
@@ -36,7 +37,7 @@ export default defineConfig({
           name    : 'dom',
           include : ['tests/**/*.dom.test.ts'],
           browser : {
-            provider  : 'playwright',
+            provider  : playwright(),
             enabled   : true,
             headless  : true,
             instances : [

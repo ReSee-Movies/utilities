@@ -75,7 +75,7 @@ export function generateTableOfContents<S extends TableOfContentsSource>(
     return { tableOfContents: [], contentSource: source };
   }
 
-  let headings = [] as HeadingInfo[];
+  let headings: HeadingInfo[];
 
   if (isString(source)) {
     headings = extractStringSourceHeadings(source);
@@ -168,7 +168,7 @@ type HeadingInfo = {
 function extractStringSourceHeadings(source: string) {
   const results: HeadingInfo[] = [];
 
-  let match: RegExpExecArray | null = null;
+  let match: RegExpExecArray | null;
 
   do {
     match = HeaderRegex.exec(source);

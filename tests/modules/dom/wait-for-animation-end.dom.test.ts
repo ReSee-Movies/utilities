@@ -2,7 +2,7 @@ import { waitForAnimationEnd } from '@/dom/wait-for-animation-end';
 import { getTimer } from '@/timers/get-timer';
 import { sleep } from '@/timers/sleep';
 import { describe, expect, test } from 'vitest';
-import { page } from '@vitest/browser/context';
+import { page } from 'vitest/browser';
 
 
 describe('waitForAnimationEnd()', () => {
