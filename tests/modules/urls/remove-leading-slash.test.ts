@@ -1,4 +1,4 @@
-import { removeLeadingSlash } from '#urls/remove-leading-slash.js';
+import { removeLeadingSlash } from '@/urls/remove-leading-slash';
 import { describe, expect, test } from 'vitest';
 
 describe('urls/removeLeadingSlash()', () => {

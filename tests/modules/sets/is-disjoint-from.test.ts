@@ -1,4 +1,4 @@
-import { isDisjointFrom } from '#sets/is-disjoint-from.js';
+import { isDisjointFrom } from '@/sets/is-disjoint-from';
 import { describe, expect, test } from 'vitest';
 
 describe('sets/isDisjointFrom()', () => {

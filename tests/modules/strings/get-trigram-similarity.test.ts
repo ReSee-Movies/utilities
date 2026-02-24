@@ -1,4 +1,4 @@
-import { getTrigramSimilarity } from '#strings/get-trigram-similarity.js';
+import { getTrigramSimilarity } from '@/strings/get-trigram-similarity';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/generateTrigram()', () => {

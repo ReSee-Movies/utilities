@@ -1,4 +1,4 @@
-import { deserializeQueryObject } from '#urls/deserialize-query-object.js';
+import { deserializeQueryObject } from '@/urls/deserialize-query-object';
 import { describe, expect, test } from 'vitest';
 
 

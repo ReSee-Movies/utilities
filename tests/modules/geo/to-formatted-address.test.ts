@@ -1,4 +1,4 @@
-import { toFormattedAddress, type AddressFormat2, AddressFormat1 } from '#geo/to-formatted-address.js';
+import { toFormattedAddress, type AddressFormat2, AddressFormat1 } from '@/geo/to-formatted-address';
 import { describe, expect, test } from 'vitest';
 
 

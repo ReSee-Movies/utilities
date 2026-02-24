@@ -1,4 +1,4 @@
-import { hasKey } from '#objects/has-key.js';
+import { hasKey } from '@/objects/has-key';
 import { describe, expect, test } from 'vitest';
 
 describe('objects/hasKey()', () => {

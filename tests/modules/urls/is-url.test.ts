@@ -1,4 +1,4 @@
-import { isUrl } from '#urls/is-url.js';
+import { isUrl } from '@/urls/is-url';
 import { describe, expect, test } from 'vitest';
 
 describe('urls/isURL()', () => {

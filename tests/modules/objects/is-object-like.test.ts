@@ -1,4 +1,4 @@
-import { isObjectLike } from '#objects/is-object-like.js';
+import { isObjectLike } from '@/objects/is-object-like';
 import { describe, expect, test } from 'vitest';
 
 

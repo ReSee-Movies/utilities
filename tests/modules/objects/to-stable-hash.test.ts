@@ -1,4 +1,4 @@
-import { toStableHash } from '#objects/to-stable-hash.js';
+import { toStableHash } from '@/objects/to-stable-hash';
 import { describe, expect, test } from 'vitest';
 
 

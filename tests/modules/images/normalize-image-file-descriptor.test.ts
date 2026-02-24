@@ -1,6 +1,6 @@
-import { normalizeImageFileDescriptor } from '#images/normalize-image-file-descriptor.js';
-import type { DirectusFileDescriptor } from '#resee/get-media-asset-url.js';
-import { TmdbFileDescriptor } from '#tmdb/get-tmdb-image-url.js';
+import { normalizeImageFileDescriptor } from '@/images/normalize-image-file-descriptor';
+import type { DirectusFileDescriptor } from '@/resee/get-media-asset-url';
+import { TmdbFileDescriptor } from '@/tmdb/get-tmdb-image-url';
 import { describe, expect, test } from 'vitest';
 
 

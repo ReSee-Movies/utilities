@@ -1,4 +1,4 @@
-import { slugify } from '#strings/slugify.js';
+import { slugify } from '@/strings/slugify';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/slugify()', () => {

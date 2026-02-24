@@ -1,4 +1,4 @@
-import { toCyrb64Hash } from '#strings/to-cyrb64-hash.js';
+import { toCyrb64Hash } from '@/strings/to-cyrb64-hash';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/toCyrb64Hash()', () => {

@@ -1,4 +1,4 @@
-import { getIdFromSlug } from '#resee/get-id-from-slug.js';
+import { getIdFromSlug } from '@/resee/get-id-from-slug';
 import { describe, expect, test } from 'vitest';
 
 describe('resee/getIdFromSlug()', () => {

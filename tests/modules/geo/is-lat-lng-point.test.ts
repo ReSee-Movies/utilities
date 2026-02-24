@@ -1,4 +1,4 @@
-import { isLatLngPoint } from '#geo/is-lat-lng-point.js';
+import { isLatLngPoint } from '@/geo/is-lat-lng-point';
 import { describe, expect, test } from 'vitest';
 
 

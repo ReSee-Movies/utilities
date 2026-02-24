@@ -1,4 +1,4 @@
-import { isSupersetOf } from '#sets/is-superset-of.js';
+import { isSupersetOf } from '@/sets/is-superset-of';
 import { describe, expect, test } from 'vitest';
 
 describe('sets/isSupersetOf()', () => {

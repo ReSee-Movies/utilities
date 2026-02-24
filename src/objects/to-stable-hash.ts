@@ -1,4 +1,4 @@
-import { toCyrb64Hash } from '#strings/to-cyrb64-hash.js';
+import { toCyrb64Hash } from '../strings/to-cyrb64-hash.js';
 
 /**
  * A (somewhat simple) way to generate a unique identifier for any value.

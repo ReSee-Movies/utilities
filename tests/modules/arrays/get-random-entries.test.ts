@@ -1,4 +1,4 @@
-import { getRandomEntries } from '#arrays/get-random-entries.js';
+import { getRandomEntries } from '@/arrays/get-random-entries';
 import { describe, expect, test } from 'vitest';
 
 describe('arrays/getRandomEntries()', () => {

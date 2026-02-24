@@ -1,4 +1,4 @@
-import { toStableHash } from '#objects/to-stable-hash.js';
+import { toStableHash } from '../objects/to-stable-hash.js';
 import { generateTrigram } from './generate-trigram.js';
 import { getTrigramSimilarity } from './get-trigram-similarity.js';
 

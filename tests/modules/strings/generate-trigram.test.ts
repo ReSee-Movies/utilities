@@ -1,4 +1,4 @@
-import { generateTrigram } from '#strings/generate-trigram.js';
+import { generateTrigram } from '@/strings/generate-trigram';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/generateTrigram()', () => {

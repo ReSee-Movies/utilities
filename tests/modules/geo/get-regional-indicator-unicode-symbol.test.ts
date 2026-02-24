@@ -1,4 +1,4 @@
-import { getRegionalIndicatorUnicodeSymbol } from '#geo/get-regional-indicator-unicode-symbol.js';
+import { getRegionalIndicatorUnicodeSymbol } from '@/geo/get-regional-indicator-unicode-symbol';
 import { describe, expect, test } from 'vitest';
 
 

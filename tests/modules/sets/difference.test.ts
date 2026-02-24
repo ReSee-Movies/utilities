@@ -1,4 +1,4 @@
-import { difference } from '#sets/difference.js';
+import { difference } from '@/sets/difference';
 import { describe, expect, test } from 'vitest';
 
 describe('sets/difference()', () => {

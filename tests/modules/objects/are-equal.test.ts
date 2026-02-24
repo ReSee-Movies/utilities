@@ -1,4 +1,4 @@
-import { areEqual } from '#objects/are-equal.js';
+import { areEqual } from '@/objects/are-equal';
 import { describe, expect, test } from 'vitest';
 
 describe('objects/areEqual()', () => {

@@ -1,4 +1,4 @@
-import { pluckObject } from '#objects/pluck-object.js';
+import { pluckObject } from '@/objects/pluck-object';
 import { describe, expect, test } from 'vitest';
 
 

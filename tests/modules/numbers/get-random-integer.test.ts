@@ -1,4 +1,4 @@
-import { getRandomInteger } from '#numbers/get-random-integer.js';
+import { getRandomInteger } from '@/numbers/get-random-integer';
 import { describe, expect, test } from 'vitest';
 
 describe('numbers/getRandomInteger()', () => {

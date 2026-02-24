@@ -1,4 +1,4 @@
-import { toNonNullableArray } from '#arrays/to-non-nullable-array.js';
+import { toNonNullableArray } from '@/arrays/to-non-nullable-array';
 import { describe, expect, test } from 'vitest';
 
 describe('arrays/toNonNullableArray', () => {

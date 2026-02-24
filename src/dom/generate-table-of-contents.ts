@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid/non-secure';
-import { toInteger } from '#numbers/to-integer.js';
-import { isString } from '#strings/is-string.js';
-import { slugify } from '#strings/slugify.js';
+import { toInteger } from '../numbers/to-integer.js';
+import { isString } from '../strings/is-string.js';
+import { slugify } from '../strings/slugify.js';
 
 
 /**

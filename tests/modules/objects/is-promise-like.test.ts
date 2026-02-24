@@ -1,4 +1,4 @@
-import { isPromiseLike } from '#objects/is-promise-like.js';
+import { isPromiseLike } from '@/objects/is-promise-like';
 import { describe, expect, test } from 'vitest';
 
 

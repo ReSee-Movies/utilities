@@ -1,4 +1,4 @@
-import { toInteger } from '#numbers/to-integer.js';
+import { toInteger } from '@/numbers/to-integer';
 import { describe, expect, test } from 'vitest';
 
 describe('numbers/toInteger()', () => {

@@ -1,4 +1,4 @@
-import { serializeToSearchParams } from '#urls/serialize-to-search-params.js';
+import { serializeToSearchParams } from '@/urls/serialize-to-search-params';
 import { describe, expect, test } from 'vitest';
 
 

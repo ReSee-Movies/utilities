@@ -1,4 +1,4 @@
-import { toTitleCase } from '#strings/to-title-case.js';
+import { toTitleCase } from '@/strings/to-title-case';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/toTitleCase()', () => {

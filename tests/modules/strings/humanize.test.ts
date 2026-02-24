@@ -1,4 +1,4 @@
-import { humanize } from '#strings/humanize.js';
+import { humanize } from '@/strings/humanize';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/humanize()', () => {

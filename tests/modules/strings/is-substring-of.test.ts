@@ -1,4 +1,4 @@
-import { isSubstringOf } from '#strings/is-substring-of.js';
+import { isSubstringOf } from '@/strings/is-substring-of';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/isSubstringOf()', () => {

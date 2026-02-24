@@ -1,4 +1,4 @@
-import { createSeoMetadata } from '#seo/create-seo-metadata.js';
+import { createSeoMetadata } from '@/seo/create-seo-metadata';
 import { describe, expect, test } from 'vitest';
 
 

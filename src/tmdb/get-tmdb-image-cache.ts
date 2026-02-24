@@ -1,6 +1,6 @@
-import { loadImage } from '#dom/load-image.js';
-import { isNumber } from '#numbers/is-number.js';
-import { isString } from '#strings/is-string.js';
+import { loadImage } from '../dom/load-image.js';
+import { isNumber } from '../numbers/is-number.js';
+import { isString } from '../strings/is-string.js';
 import { fromTmdbImageSize } from './from-tmdb-image-size.js';
 import { getTmdbImageUrl } from './get-tmdb-image-url.js';
 import { toTmdbImageSize } from './to-tmdb-image-size.js';

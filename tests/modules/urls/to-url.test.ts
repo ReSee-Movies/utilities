@@ -1,4 +1,4 @@
-import { toUrl } from '#urls/to-url.js';
+import { toUrl } from '@/urls/to-url';
 import { describe, expect, test } from 'vitest';
 
 describe('urls/toUrl()', () => {
