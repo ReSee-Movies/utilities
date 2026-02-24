@@ -34,6 +34,15 @@ export class TmdbImageCacheResult extends Promise<string> {
 
 
 /**
+ * Options for the {@link TmdbImageCache.getImage} method.
+ */
+export type GetImageOptions = {
+  size?    : string | number;
+  baseUrl? : string;
+}
+
+
+/**
  * The TmdbImageCache provides a mechanism to keep track of image URLs that have
  * been downloaded from TMDB at specific resolutions. This allows for a few tricks
  * to be performed, such as:
@@ -59,12 +68,12 @@ export class TmdbImageCache {
    * `placeholder` property set. If set, this can be used while the promise itself is
    * pending.
    */
-  public getImage(src: string, size?: string | number): string | TmdbImageCacheResult {
-    const requested = this.toParts(src, size);
+  public getImage(src: string, options?: GetImageOptions): string | TmdbImageCacheResult {
+    const requested = this.toParts(src, options?.size);
     const available = this.getClosestInCache(requested.imageId, requested.numericSize);
 
     const availableUrl = available
-      ? getTmdbImageUrl(available.imageId, toTmdbImageSize(available.numericSize))
+      ? getTmdbImageUrl(available.imageId, toTmdbImageSize(available.numericSize), { baseUrl: options?.baseUrl })
       : undefined;
 
     // 1. An image of adequate resolution has already been loaded.
@@ -77,7 +86,7 @@ export class TmdbImageCache {
     const { imageId, numericSize } = requested;
 
     const loadImageResult = loadImage(
-      getTmdbImageUrl(imageId, toTmdbImageSize(numericSize)),
+      getTmdbImageUrl(imageId, toTmdbImageSize(numericSize), { baseUrl: options?.baseUrl }),
     );
 
     return new TmdbImageCacheResult((resolve, reject) => {
