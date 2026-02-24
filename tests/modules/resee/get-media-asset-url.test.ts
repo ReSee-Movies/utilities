@@ -1,4 +1,4 @@
-import { DefaultBaseUrl, getMediaAssetUrl } from '#resee/get-media-asset-url.js';
+import { DefaultBaseUrl, getMediaAssetUrl } from '@/resee/get-media-asset-url';
 import { describe, expect, test } from 'vitest';
 
 

@@ -1,4 +1,4 @@
-import { DefaultBaseUrl, getTmdbImageUrl } from '#tmdb/get-tmdb-image-url.js';
+import { DefaultBaseUrl, getTmdbImageUrl } from '@/tmdb/get-tmdb-image-url';
 import { describe, expect, test } from 'vitest';
 
 describe('tmdb/getTmdbImageUrl()', () => {

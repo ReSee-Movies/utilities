@@ -6,8 +6,6 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, './src/'),
     },
-
-    conditions: ['development'],
   },
 
   test: {

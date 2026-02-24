@@ -28,12 +28,6 @@
     "./typings/*": "./dist/typings/*.js",
     "./urls/*": "./dist/urls/*.js"
   },
-  "imports": {
-    "#*": {
-      "development": "./src/*",
-      "default": "./dist/*"
-    }
-  },
   "scripts": {
     "dev": "rm -rf ./dist && tsc --watch",
     "prepare": "rm -rf ./dist && tsc",

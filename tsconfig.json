@@ -6,7 +6,6 @@
     "module": "preserve",
     "rootDir": "./src",
     "outDir": "./dist",
-    "customConditions": ["development"],
     "declaration": true,
     "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,

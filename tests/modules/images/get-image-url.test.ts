@@ -1,7 +1,7 @@
-import { getImageUrl } from '#images/get-image-url.js';
-import { normalizeImageFileDescriptor } from '#images/normalize-image-file-descriptor.js';
-import { DefaultBaseUrl as DefaultReseeBaseUrl, DirectusFileDescriptor } from '#resee/get-media-asset-url.js';
-import { DefaultBaseUrl as DefaultTmdbBaseUrl, TmdbFileDescriptor } from '#tmdb/get-tmdb-image-url.js';
+import { getImageUrl } from '@/images/get-image-url';
+import { normalizeImageFileDescriptor } from '@/images/normalize-image-file-descriptor';
+import { DefaultBaseUrl as DefaultReseeBaseUrl, DirectusFileDescriptor } from '@/resee/get-media-asset-url';
+import { DefaultBaseUrl as DefaultTmdbBaseUrl, TmdbFileDescriptor } from '@/tmdb/get-tmdb-image-url';
 import { describe, expect, test } from 'vitest';
 
 
