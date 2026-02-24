@@ -11,5 +11,5 @@ export const UUIDv4Length = 36;
  * Tests whether the provided value has the shape of a version 4 UUID value.
  */
 export function isUUID(value: unknown): value is string {
-  return isString(value) && value.length === UUIDv4Length && !!value.match(v4);
+  return isString(value) && value.length === UUIDv4Length && !!v4.exec(value);
 }

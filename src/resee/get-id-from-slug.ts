@@ -2,6 +2,8 @@ import { isNumber } from '../numbers/is-number.js';
 import { isString } from '../strings/is-string.js';
 import { isUUID, UUIDv4Length } from '../strings/is-uuid.js';
 
+const allDigits = new RegExp(/^(\d+)/);
+
 /**
  * Retrieves an ID that has been embedded at the beginning of a URL slug.
  */
@@ -15,7 +17,7 @@ export function getIdFromSlug(slug: unknown, type: 'number' | 'uuid' | `first-${
       parsed = slug;
     }
     else if (isString(slug)) {
-      parsed = parseInt(slug.match(/^(\d+)/)?.[0] ?? 'NaN');
+      parsed = parseInt(allDigits.exec(slug)?.[0] ?? 'NaN');
     }
 
     return Number.isNaN(parsed) ? undefined : parsed;

@@ -22,7 +22,7 @@ export class Timer {
   public mark(format: true): string;
   public mark(format?: undefined): number;
 
-  public mark(format: boolean = false) {
+  public mark(format = false) {
     const value = performance.now() - this._start;
     return format ? formatter.format(value) : value;
   }

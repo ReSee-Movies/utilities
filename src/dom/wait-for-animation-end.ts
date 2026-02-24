@@ -17,10 +17,11 @@
  *     modalClosed();
  * }
  */
-export async function waitForAnimationEnd(target: HTMLElement, fallbackTimeout: number = 500) {
+export async function waitForAnimationEnd(target: HTMLElement, fallbackTimeout = 500) {
   return new Promise<void>((resolve) => {
     try {
-      window;
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      window.Math;
     }
     catch {
       resolve();

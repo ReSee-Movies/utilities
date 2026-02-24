@@ -1,6 +1,8 @@
 import { isNumber } from '../numbers/is-number.js';
 import { isString } from '../strings/is-string.js';
 
+const widthString = new RegExp(/w?(\d+)/);
+
 /**
  * Config options for the {@link fromTmdbImageSize} utility method.
  */
@@ -28,7 +30,7 @@ export function fromTmdbImageSize(value: unknown, options?: FromTmdbImageSizeOpt
       return options?.originalIsUndefined ? undefined : Number.POSITIVE_INFINITY;
     }
 
-    const match = value.match(/w?(\d+)/);
+    const match = widthString.exec(value);
 
     if (match) {
       return parseInt(match[1]);

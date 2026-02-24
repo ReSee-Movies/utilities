@@ -2,7 +2,7 @@ import { trigram } from '@drorgl/n-gram';
 
 
 function convertString(input = ''): string {
-  if (!input || !input.trim()) {
+  if (!input?.trim()) {
     return '';
   }
 

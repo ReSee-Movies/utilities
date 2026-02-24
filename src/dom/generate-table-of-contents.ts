@@ -176,7 +176,7 @@ function extractStringSourceHeadings(source: string) {
     if (match?.groups) {
       const level = toInteger(match.groups.level);
       const text  = match.groups.content;
-      const attrs = match.groups.attrs?.match(IdAttrRegex);
+      const attrs = match.groups.attrs ? IdAttrRegex.exec(match.groups.attrs) : undefined;
       const slug  = attrs?.groups?.id || (match.groups.content ? slugify(match.groups.content) : nanoid(10));
 
       const originalMatch = match[0];

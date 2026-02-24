@@ -48,7 +48,7 @@ export class TmdbImageCacheResult extends Promise<string> {
  * will always return the same singleton instance.
  */
 export class TmdbImageCache {
-  protected cache: Map<string, number[]> = new Map();
+  protected cache: Map<string, number[]> = new Map<string, number[]>();
 
 
   /**

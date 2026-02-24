@@ -7,7 +7,7 @@ import { toFormattedAddress, type AddressFormat } from './to-formatted-address.j
  */
 export function getGoogleMapsQueryUrl(
   query: string | string[] | AddressFormat,
-  basePath: string = 'https://www.google.com/maps/search/?api=1',
+  basePath = 'https://www.google.com/maps/search/?api=1',
 ) {
   let queryString = '';
 

@@ -4,7 +4,7 @@ import { describe, expect, test } from 'vitest';
 
 describe('objects/isPromiseLike()', () => {
   test('it checks that the identity of the argument is a "thenable"', async () => {
-    const thenable = { then() {} };
+    const thenable = { then() { /* noop */ } };
     const promise  = Promise.resolve();
 
     expect(isPromiseLike(thenable)).toEqual(true);

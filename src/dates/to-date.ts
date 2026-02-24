@@ -1,6 +1,8 @@
 import { isNumber } from '../numbers/is-number.js';
 import { isString } from '../strings/is-string.js';
 
+const integerLike = new RegExp(/^-?\d+$/);
+
 /**
  * Tries to create a Date instance out of a variety of inputs:
  * a number, a number string, a string, or another Date instance.
@@ -18,7 +20,7 @@ export function toDate(date: unknown) {
     dateInst = new Date(date);
   }
   else if (isString(date)) {
-    dateInst = new Date(date.match(/^-?\d+$/) ? parseInt(date) : date);
+    dateInst = new Date(integerLike.exec(date) ? parseInt(date) : date);
   }
 
   return dateInst && !isNaN(dateInst.getFullYear())

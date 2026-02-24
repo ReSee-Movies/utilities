@@ -8,7 +8,6 @@ describe('images/normalizeImageFileDescriptor()', () => {
   test('it creates a normalized image descriptor from any of several sources', () => {
     const exactString = normalizeImageFileDescriptor('https://noexist.co/img.png');
     const tmdbString  = normalizeImageFileDescriptor('/img.png');
-    const descriptor  = normalizeImageFileDescriptor(tmdbString);
 
     const directusA = normalizeImageFileDescriptor({
       id                : 'resee-img-a.png',

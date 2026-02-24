@@ -8,7 +8,7 @@ import { toCyrb64Hash } from '../strings/to-cyrb64-hash.js';
  * be stable indefinitely. More complex structures - Maps, HTMLElements, etc. - cannot
  * be relied on to generate the same hash across multiple processes.
  */
-export function toStableHash(arg: unknown, compact: boolean = false) {
+export function toStableHash(arg: unknown, compact = false) {
   const result = valueToHash(arg);
   return compact ? toCyrb64Hash(result) : result;
 }
