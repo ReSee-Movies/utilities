@@ -1,18 +1,19 @@
 import { isString } from '../strings/is-string.js';
 import type { ImageFileDescriptor } from '../images/normalize-image-file-descriptor.js';
-import { getImageUrl } from '../images/get-image-url.js';
+import { getImageUrl, type GetImageUrlOptions } from '../images/get-image-url.js';
 
 
 /**
  * Config options for the {@link createSeoMetadata} method.
  */
 export type CreateSeoMetadataOptions = {
-  imagePath?  : ImageFileDescriptor;
-  titleField? : string | string[];
-  title?      : string;
-  descField?  : string;
-  desc?       : string;
-  jsonLD?     : string | object;
+  imagePath?    : ImageFileDescriptor;
+  imageOptions? : GetImageUrlOptions;
+  titleField?   : string | string[];
+  title?        : string;
+  descField?    : string;
+  desc?         : string;
+  jsonLD?       : string | object;
 };
 
 
@@ -52,19 +53,23 @@ export function createSeoMetadata(
   else {
     const titleField = config.titleField ?? 'title';
 
-    title = Array.isArray(titleField)
-      ? titleField.map((key) => record[key]).join(' ')
-      : String(record[titleField]);
+    if (Array.isArray(titleField)) {
+      title = titleField.map((key) => record[key]).join(' ');
+    }
+    else if (record[titleField]) {
+      title = String(record[titleField]);
+    }
   }
 
   if (config.desc) {
     desc = config.desc;
   }
   else {
-    desc = String(record[config.descField ?? 'description']);
+    const descValue = record[config.descField ?? 'description'];
+    desc = descValue ? String(descValue) : undefined;
   }
 
-  if (isString(title) && title.length) {
+  if (isString(title, { withContent: true })) {
     result.title = title;
 
     result.meta.push(
@@ -73,7 +78,7 @@ export function createSeoMetadata(
     );
   }
 
-  if (isString(desc) && desc.length) {
+  if (isString(desc, { withContent: true })) {
     result.meta.push(
       { name: 'description', content: desc },
       { name: 'og:description', content: desc },
@@ -82,12 +87,14 @@ export function createSeoMetadata(
   }
 
   if (config.imagePath) {
-    const imageUrl = getImageUrl(config.imagePath);
+    const imageUrl = getImageUrl(config.imagePath, config.imageOptions);
 
-    result.meta.push(
-      { name: 'og:image', content: imageUrl },
-      { name: 'twitter:image', content: imageUrl },
-    );
+    if (imageUrl) {
+      result.meta.push(
+        { name: 'og:image', content: imageUrl },
+        { name: 'twitter:image', content: imageUrl },
+      );
+    }
   }
 
   if (config.jsonLD) {

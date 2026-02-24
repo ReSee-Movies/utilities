@@ -99,5 +99,31 @@ describe('seo/createSeoMetadata()', () => {
       .to.haveOwnProperty('script')
       .which.is.an('array')
       .and.has.lengthOf(1);
+
+    expect(
+      createSeoMetadata({}, {
+        imagePath    : { filename: 'no-exist.jpg', width: 342 },
+        imageOptions : { tmdbBaseUrl: 'https://tmdb.noexist.co/' },
+      }),
+    ).to.deep.equal({
+      title : undefined,
+      meta  : [
+        { content: 'https://tmdb.noexist.co/w342/no-exist.jpg', name: 'og:image'},
+        { content: 'https://tmdb.noexist.co/w342/no-exist.jpg', name: 'twitter:image' },
+      ],
+    });
+
+    expect(
+      createSeoMetadata({}, {
+        imagePath    : { id: '1234abcd', filename_download: 'file.png' },
+        imageOptions : { reseeBaseUrl: 'https://resee.noexist.co/' },
+      }),
+    ).to.deep.equal({
+      title : undefined,
+      meta  : [
+        { content: 'https://resee.noexist.co/1234abcd/file.png', name: 'og:image'},
+        { content: 'https://resee.noexist.co/1234abcd/file.png', name: 'twitter:image' },
+      ],
+    });
   });
 });
