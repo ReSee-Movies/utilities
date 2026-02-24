@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.1](https://github.com/ReSee-Movies/utilities/compare/1.0.0...1.0.1) (2026-02-24)
+
+### Bug Fixes
+
+* **TmdbImageCache:** provide option to pass baseUrl to getImage method ([1bfe7cb](https://github.com/ReSee-Movies/utilities/commit/1bfe7cba6b6f23f7bbba1e9b6ba48547dccd4c49))
+
 ## [1.0.0](https://github.com/ReSee-Movies/utilities/compare/0.12.2...1.0.0) (2026-02-24)
 
 ### Bug Fixes

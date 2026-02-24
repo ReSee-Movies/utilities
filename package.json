@@ -5,7 +5,7 @@
     "url": "git+https://github.com/resee-movies/utilities.git"
   },
   "bugs": "https://github.com/resee-movies/utilities/issues",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "type": "module",
   "files": [
