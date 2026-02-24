@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.0](https://github.com/ReSee-Movies/utilities/compare/0.12.2...1.0.0) (2026-02-24)
+
+### Bug Fixes
+
+* **createSeoMetadata:** added the ability to pass tmdb and resee URL base paths ([24a621a](https://github.com/ReSee-Movies/utilities/commit/24a621a200c7bfd3887c5ea38fff5e32ca27dd58))
+
+### Reverts
+
+* Revert "refactor: use subpath imports" ([55ab5f1](https://github.com/ReSee-Movies/utilities/commit/55ab5f18663dfd340544e0a3b7eb80becbdd6452))
+
 ## [0.12.2](https://github.com/resee-movies/utilities/compare/0.12.1...0.12.2) (2026-02-19)
 
 ### Bug Fixes
