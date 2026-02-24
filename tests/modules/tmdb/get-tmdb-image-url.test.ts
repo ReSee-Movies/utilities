@@ -1,10 +1,9 @@
-import { getReseeUtilityConstant } from '@/config';
-import { getTmdbImageUrl } from '@/tmdb/get-tmdb-image-url';
+import { DefaultBaseUrl, getTmdbImageUrl } from '#tmdb/get-tmdb-image-url.js';
 import { describe, expect, test } from 'vitest';
 
 describe('tmdb/getTmdbImageUrl()', () => {
   test('it will generate a URL to a TMDB image asset', () => {
-    const tmdbBase  = getReseeUtilityConstant('tmdbImageBaseUrl');
+    const tmdbBase  = DefaultBaseUrl;
     const filename  = '123.png';
     const width     = 'w342';
 

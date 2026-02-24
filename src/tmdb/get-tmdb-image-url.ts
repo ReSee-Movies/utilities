@@ -1,6 +1,5 @@
-import { getReseeUtilityConstant } from '../config.js';
-import { isObjectLike } from '../objects/is-object-like.js';
-import { ensureLeadingSlash } from '../urls/ensure-leading-slash.js';
+import { isObjectLike } from '#objects/is-object-like.js';
+import { ensureLeadingSlash } from '#urls/ensure-leading-slash.js';
 import { toTmdbImageSize } from './to-tmdb-image-size.js';
 
 
@@ -52,6 +51,11 @@ export type TmdbProfileSize = typeof TmdbProfileSizes[number];
 export type TmdbImageSize = TmdbPosterSize | TmdbBackdropSize | TmdbLogoSize | TmdbProfileSize | string | number;
 
 /**
+ * The default value of {@link GetTmdbImageUrlOptions.baseUrl}.
+ */
+export const DefaultBaseUrl = 'https://image.tmdb.org/t/p/';
+
+/**
  * Config options for the {@link getTmdbImageUrl} utility method.
  */
 export type GetTmdbImageUrlOptions = {
@@ -97,7 +101,7 @@ export function getTmdbImageUrl(
 
   fileSize = size ?? fileSize ?? 'original';
 
-  return (opts?.baseUrl ?? getReseeUtilityConstant('tmdbImageBaseUrl'))
+  return (opts?.baseUrl ?? DefaultBaseUrl)
     + toTmdbImageSize(fileSize)
     + ensureLeadingSlash(fileName);
 }

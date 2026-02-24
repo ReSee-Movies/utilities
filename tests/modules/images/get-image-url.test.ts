@@ -1,15 +1,14 @@
-import { getReseeUtilityConstant } from '@/config';
-import { getImageUrl } from '@/images/get-image-url';
-import { normalizeImageFileDescriptor } from '@/images/normalize-image-file-descriptor';
-import { DirectusFileDescriptor } from '@/resee/get-media-asset-url';
-import { TmdbFileDescriptor } from '@/tmdb/get-tmdb-image-url';
+import { getImageUrl } from '#images/get-image-url.js';
+import { normalizeImageFileDescriptor } from '#images/normalize-image-file-descriptor.js';
+import { DefaultBaseUrl as DefaultReseeBaseUrl, DirectusFileDescriptor } from '#resee/get-media-asset-url.js';
+import { DefaultBaseUrl as DefaultTmdbBaseUrl, TmdbFileDescriptor } from '#tmdb/get-tmdb-image-url.js';
 import { describe, expect, test } from 'vitest';
 
 
 describe('images/getImageUrl()', () => {
   test('it creates a URL from one of several sources', () => {
-    const reseeBaseUrl = getReseeUtilityConstant('reseeImageBaseUrl');
-    const tmdbBaseUrl  = getReseeUtilityConstant('tmdbImageBaseUrl');
+    const reseeBaseUrl = DefaultReseeBaseUrl;
+    const tmdbBaseUrl  = DefaultTmdbBaseUrl;
 
     const exactString = 'https://noexist.co/img.png';
     const tmdbString  = 'img.png';

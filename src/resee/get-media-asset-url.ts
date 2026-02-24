@@ -1,8 +1,7 @@
-import { getReseeUtilityConstant } from '../config.js';
-import { isObjectLike } from '../objects/is-object-like.js';
-import { isString } from '../strings/is-string.js';
-import type { UrlQuerySerializableObject } from '../typings/url-query-serialization.js';
-import { serializeToSearchParams } from '../urls/serialize-to-search-params.js';
+import { isObjectLike } from '#objects/is-object-like.js';
+import { isString } from '#strings/is-string.js';
+import type { UrlQuerySerializableObject } from '#typings/url-query-serialization.js';
+import { serializeToSearchParams } from '#urls/serialize-to-search-params.js';
 
 /**
  * The basic shape of an "Asset" record provided by the Directus CMS. This
@@ -16,6 +15,11 @@ export type DirectusFileDescriptor = {
   height?            : number | null;
   width?             : number | null;
 };
+
+/**
+ * The default value of {@link GetMediaAssetUrlOptions.baseUrl}.
+ */
+export const DefaultBaseUrl = '/assets/';
 
 /**
  * Config that can be provided to the Directus CMS for manipulating image
@@ -83,7 +87,7 @@ export function getMediaAssetUrl(
   }
 
   return [
-    baseUrl ?? getReseeUtilityConstant('reseeImageBaseUrl'),
+    baseUrl ?? DefaultBaseUrl,
     path,
     (query ? `?${ query.toString() }` : ''),
   ].join('');

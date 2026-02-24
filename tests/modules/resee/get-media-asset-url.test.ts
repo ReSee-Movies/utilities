@@ -1,11 +1,10 @@
-import { getReseeUtilityConstant } from '@/config';
-import { getMediaAssetUrl } from '@/resee/get-media-asset-url';
+import { DefaultBaseUrl, getMediaAssetUrl } from '#resee/get-media-asset-url.js';
 import { describe, expect, test } from 'vitest';
 
 
 describe('resee/getMediaAssetUrl()', () => {
   test('it will generate a URL to a ReSee image asset', () => {
-    const reseeBase    = getReseeUtilityConstant('reseeImageBaseUrl');
+    const reseeBase    = DefaultBaseUrl;
     const testId       = 'abc-123';
     const testFilename = 'img.png';
 

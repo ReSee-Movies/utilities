@@ -7,12 +7,12 @@
   "bugs": "https://github.com/resee-movies/utilities/issues",
   "version": "0.12.2",
   "private": false,
+  "type": "module",
   "files": [
     "./dist"
   ],
   "exports": {
     "./arrays/*": "./dist/arrays/*.js",
-    "./config": "./dist/config.js",
     "./dates/*": "./dist/dates/*.js",
     "./dom/*": "./dist/dom/*.js",
     "./geo/*": "./dist/geo/*.js",
@@ -27,6 +27,12 @@
     "./tmdb/*": "./dist/tmdb/*.js",
     "./typings/*": "./dist/typings/*.js",
     "./urls/*": "./dist/urls/*.js"
+  },
+  "imports": {
+    "#*": {
+      "development": "./src/*",
+      "default": "./dist/*"
+    }
   },
   "scripts": {
     "dev": "rm -rf ./dist && tsc --watch",
