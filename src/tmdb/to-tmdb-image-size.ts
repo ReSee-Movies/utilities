@@ -1,4 +1,4 @@
-import { isNumber } from '../numbers/is-number.js';
+import { isNumber } from '#numbers/is-number.js';
 
 /**
  * Takes an integer or string and creates a string "size" for TMDB image assets.

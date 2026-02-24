@@ -1,4 +1,4 @@
-import { chunkArray } from '@/arrays/chunk-arrays';
+import { chunkArray } from '#arrays/chunk-arrays.js';
 import { describe, expect, test } from 'vitest';
 
 describe('arrays/chunkArray()', () => {

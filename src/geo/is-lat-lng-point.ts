@@ -1,5 +1,5 @@
-import { isNumber } from '../numbers/is-number.js';
-import { isObjectLike } from '../objects/is-object-like.js';
+import { isNumber } from '#numbers/is-number.js';
+import { isObjectLike } from '#objects/is-object-like.js';
 
 
 /**

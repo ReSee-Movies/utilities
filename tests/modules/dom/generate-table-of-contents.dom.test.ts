@@ -1,4 +1,4 @@
-import { generateTableOfContents, TableOfContentsObjectSource } from '@/dom/generate-table-of-contents';
+import { generateTableOfContents, TableOfContentsObjectSource } from '#dom/generate-table-of-contents.js';
 import { describe, expect, test } from 'vitest';
 
 describe('generateTableOfContents()', () => {

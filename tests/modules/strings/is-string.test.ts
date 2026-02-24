@@ -1,4 +1,4 @@
-import { isString } from '@/strings/is-string';
+import { isString } from '#strings/is-string.js';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/isString()', () => {

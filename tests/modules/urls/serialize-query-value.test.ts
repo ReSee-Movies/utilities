@@ -1,4 +1,4 @@
-import { serializeQueryValue } from '@/urls/serialize-query-value';
+import { serializeQueryValue } from '#urls/serialize-query-value.js';
 import { describe, expect, test } from 'vitest';
 
 

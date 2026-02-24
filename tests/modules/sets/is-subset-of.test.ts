@@ -1,4 +1,4 @@
-import { isSubsetOf } from '@/sets/is-subset-of';
+import { isSubsetOf } from '#sets/is-subset-of.js';
 import { describe, expect, test } from 'vitest';
 
 describe('sets/isSubsetOf()', () => {

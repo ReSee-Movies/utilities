@@ -1,4 +1,4 @@
-import { isNumber } from '@/numbers/is-number';
+import { isNumber } from '#numbers/is-number.js';
 import { describe, expect, test } from 'vitest';
 
 describe('numbers/isNumber()', () => {

@@ -1,4 +1,4 @@
-import { pruneObject } from '@/objects/prune-object';
+import { pruneObject } from '#objects/prune-object.js';
 import { describe, expect, test } from 'vitest';
 
 

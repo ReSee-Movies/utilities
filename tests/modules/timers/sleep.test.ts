@@ -1,5 +1,5 @@
-import { getTimer } from '@/timers/get-timer';
-import { sleep } from '@/timers/sleep';
+import { getTimer } from '#timers/get-timer.js';
+import { sleep } from '#timers/sleep.js';
 import { describe, expect, test } from 'vitest';
 
 

@@ -1,5 +1,5 @@
-import { isObjectLike } from '../objects/is-object-like.js';
-import { isString } from '../strings/is-string.js';
+import { isObjectLike } from '#objects/is-object-like.js';
+import { isString } from '#strings/is-string.js';
 import { toFormattedAddress, type AddressFormat } from './to-formatted-address.js';
 
 /**

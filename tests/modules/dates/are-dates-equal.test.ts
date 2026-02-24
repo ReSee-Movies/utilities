@@ -1,4 +1,4 @@
-import { areDatesEqual } from '@/dates/are-dates-equal';
+import { areDatesEqual } from '#dates/are-dates-equal.js';
 import { describe, expect, test } from 'vitest';
 
 describe('dates/areDatesEqual()', () => {

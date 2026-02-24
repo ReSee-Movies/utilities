@@ -1,4 +1,4 @@
-import { getAspectRatio } from '@/numbers/get-aspect-ratio';
+import { getAspectRatio } from '#numbers/get-aspect-ratio.js';
 import { describe, expect, test } from 'vitest';
 
 describe('numbers/getAspectRatio()', () => {

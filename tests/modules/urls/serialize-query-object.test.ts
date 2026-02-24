@@ -1,4 +1,4 @@
-import { serializeQueryObject } from '@/urls/serialize-query-object';
+import { serializeQueryObject } from '#urls/serialize-query-object.js';
 import { describe, expect, test } from 'vitest';
 
 

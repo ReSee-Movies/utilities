@@ -1,4 +1,4 @@
-import { toSimpleHash } from '@/strings/to-simple-hash';
+import { toSimpleHash } from '#strings/to-simple-hash.js';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/toSimpleHash()', () => {

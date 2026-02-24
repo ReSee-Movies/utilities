@@ -1,5 +1,5 @@
-import { isNumber } from '../numbers/is-number.js';
-import { isString } from '../strings/is-string.js';
+import { isNumber } from '#numbers/is-number.js';
+import { isString } from '#strings/is-string.js';
 
 /**
  * Config options for the {@link fromTmdbImageSize} utility method.

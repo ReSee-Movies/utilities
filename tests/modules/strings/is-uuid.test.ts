@@ -1,4 +1,4 @@
-import { isUUID } from '@/strings/is-uuid';
+import { isUUID } from '#strings/is-uuid.js';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/isUUID()', () => {

@@ -1,4 +1,4 @@
-import { toTmdbImageSize } from '@/tmdb/to-tmdb-image-size';
+import { toTmdbImageSize } from '#tmdb/to-tmdb-image-size.js';
 import { describe, expect, test } from 'vitest';
 
 describe('tmdb/toTmdbImageSize()', () => {

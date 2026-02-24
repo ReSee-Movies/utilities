@@ -1,6 +1,6 @@
-import { waitForAnimationEnd } from '@/dom/wait-for-animation-end';
-import { getTimer } from '@/timers/get-timer';
-import { sleep } from '@/timers/sleep';
+import { waitForAnimationEnd } from '#dom/wait-for-animation-end.js';
+import { getTimer } from '#timers/get-timer.js';
+import { sleep } from '#timers/sleep.js';
 import { describe, expect, test } from 'vitest';
 import { page } from '@vitest/browser/context';
 

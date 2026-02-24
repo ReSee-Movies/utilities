@@ -1,4 +1,4 @@
-import { ensureLeadingSlash } from '@/urls/ensure-leading-slash';
+import { ensureLeadingSlash } from '#urls/ensure-leading-slash.js';
 import { describe, expect, test } from 'vitest';
 
 describe('urls/ensureLeadingSlash()', () => {

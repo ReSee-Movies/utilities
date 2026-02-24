@@ -1,4 +1,4 @@
-import { toArray } from '@/arrays/to-array';
+import { toArray } from '#arrays/to-array.js';
 import { describe, expect, test } from 'vitest';
 
 describe('arrays/toArray()', () => {

@@ -1,5 +1,5 @@
-import { getTmdbImageUrl } from '@/tmdb/get-tmdb-image-url';
-import { getTmdbImageCache, type TmdbImageCacheResult } from '@/tmdb/get-tmdb-image-cache';
+import { getTmdbImageUrl } from '#tmdb/get-tmdb-image-url.js';
+import { getTmdbImageCache, type TmdbImageCacheResult } from '#tmdb/get-tmdb-image-cache.js';
 import { describe, expect, test } from 'vitest';
 
 

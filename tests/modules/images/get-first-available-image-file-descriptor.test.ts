@@ -1,5 +1,5 @@
-import { getFirstAvailableImageFileDescriptor } from '@/images/get-first-available-image-file-descriptor';
-import { normalizeImageFileDescriptor } from '@/images/normalize-image-file-descriptor';
+import { getFirstAvailableImageFileDescriptor } from '#images/get-first-available-image-file-descriptor.js';
+import { normalizeImageFileDescriptor } from '#images/normalize-image-file-descriptor.js';
 import { describe, expect, test } from 'vitest';
 
 

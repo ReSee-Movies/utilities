@@ -1,4 +1,4 @@
-import { intersection } from '@/sets/intersection';
+import { intersection } from '#sets/intersection.js';
 import { describe, expect, test } from 'vitest';
 
 describe('sets/intersection()', () => {

@@ -1,5 +1,5 @@
-import { findClosestTrigramMatch } from '@/strings/find-closest-trigram-match';
-import { generateTrigram } from '@/strings/generate-trigram';
+import { findClosestTrigramMatch } from '#strings/find-closest-trigram-match.js';
+import { generateTrigram } from '#strings/generate-trigram.js';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/findClosestTrigramMatch()', () => {

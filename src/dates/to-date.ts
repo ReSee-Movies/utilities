@@ -1,5 +1,5 @@
-import { isNumber } from '../numbers/is-number.js';
-import { isString } from '../strings/is-string.js';
+import { isNumber } from '#numbers/is-number.js';
+import { isString } from '#strings/is-string.js';
 
 /**
  * Tries to create a Date instance out of a variety of inputs:

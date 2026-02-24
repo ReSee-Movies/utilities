@@ -1,6 +1,6 @@
-import { isNumber } from '../numbers/is-number.js';
-import { isString } from '../strings/is-string.js';
-import { isUUID, UUIDv4Length } from '../strings/is-uuid.js';
+import { isNumber } from '#numbers/is-number.js';
+import { isString } from '#strings/is-string.js';
+import { isUUID, UUIDv4Length } from '#strings/is-uuid.js';
 
 /**
  * Retrieves an ID that has been embedded at the beginning of a URL slug.

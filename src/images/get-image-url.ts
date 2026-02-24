@@ -1,5 +1,5 @@
-import { getMediaAssetUrl } from '../resee/get-media-asset-url.js';
-import { getTmdbImageUrl } from '../tmdb/get-tmdb-image-url.js';
+import { getMediaAssetUrl } from '#resee/get-media-asset-url.js';
+import { getTmdbImageUrl } from '#tmdb/get-tmdb-image-url.js';
 import { type ImageFileDescriptor, normalizeImageFileDescriptor } from './normalize-image-file-descriptor.js';
 
 

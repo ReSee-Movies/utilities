@@ -1,4 +1,4 @@
-import { loadImage } from '@/dom/load-image';
+import { loadImage } from '#dom/load-image.js';
 import { describe, expect, test } from 'vitest';
 
 describe('loadImage()', () => {

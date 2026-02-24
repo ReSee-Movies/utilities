@@ -1,4 +1,4 @@
-import { areArraysEqual, AreArraysEqualOptions } from '@/arrays/are-arrays-equal';
+import { areArraysEqual, AreArraysEqualOptions } from '#arrays/are-arrays-equal.js';
 import { describe, expect, test } from 'vitest';
 
 describe('arrays/areArrayEqual()', () => {

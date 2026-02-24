@@ -1,4 +1,4 @@
-import { waitForAnimationEnd } from '@/dom/wait-for-animation-end';
+import { waitForAnimationEnd } from '#dom/wait-for-animation-end.js';
 import { describe, expect, test } from 'vitest';
 
 describe('loadImage()', () => {

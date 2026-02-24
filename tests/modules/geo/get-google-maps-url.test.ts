@@ -1,4 +1,4 @@
-import { getGoogleMapsQueryUrl } from '@/geo/get-google-maps-url';
+import { getGoogleMapsQueryUrl } from '#geo/get-google-maps-url.js';
 import { describe, expect, test } from 'vitest';
 
 

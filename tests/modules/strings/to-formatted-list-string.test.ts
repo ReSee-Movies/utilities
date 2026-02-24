@@ -1,4 +1,4 @@
-import { toFormattedListString } from '@/strings/to-formatted-list-string';
+import { toFormattedListString } from '#strings/to-formatted-list-string.js';
 import { describe, expect, test } from 'vitest';
 
 describe('strings/toFormattedListString()', () => {
