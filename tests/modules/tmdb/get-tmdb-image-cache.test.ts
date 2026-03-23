@@ -10,7 +10,7 @@ describe('tmdb/getTmdbImageCache()', () => {
 
     // An image that has never been loaded in any resolution should result in
     // a promise without a placeholder URL value.
-    let imgResult = cache.getImage('img.png', 'w342');
+    let imgResult = cache.getImage('img.png', { size: 'w342' });
 
     expect(imgResult).to.be.a('promise');
     expect((imgResult as TmdbImageCacheResult).placeholderUrl).toEqual(undefined);
@@ -22,7 +22,7 @@ describe('tmdb/getTmdbImageCache()', () => {
 
     // A smaller version of an image we already loaded
     // should result in a string of that larger image's URL.
-    imgResult = cache.getImage('img.png', 'w180');
+    imgResult = cache.getImage('img.png', { size: 'w180' });
 
     expect(imgResult).to.be.a('string').and.equal(getTmdbImageUrl('img.png', 'w342'));
 
@@ -30,7 +30,7 @@ describe('tmdb/getTmdbImageCache()', () => {
     // An image that has a smaller version already loaded should result in a promise
     // with a placeholder URL to that smaller image, and resolve with the URL of
     // the larger.
-    imgResult = cache.getImage('img.png', 'w780');
+    imgResult = cache.getImage('img.png', { size: 'w780' });
 
     expect(imgResult).to.be.a('promise');
     expect((imgResult as TmdbImageCacheResult).placeholderUrl).toEqual(getTmdbImageUrl('img.png', 'w342'));
