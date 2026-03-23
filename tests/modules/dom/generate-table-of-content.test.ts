@@ -41,5 +41,8 @@ describe('generateTableOfContents() [No DOM]', () => {
     expect(resultC.tableOfContents[0]).to.have.property('text').which.equals('Sub-Heading 1.1');
     expect(resultC.tableOfContents[0]).to.have.property('slug').which.equals('sub-heading-1-1');
     expect(resultC.tableOfContents[0]).to.have.property('children').which.has.lengthOf(1);
+
+    expect(resultC.contentMap).toBeInstanceOf(WeakMap);
+    expect(resultC.contentMap?.get(TestObjectSourceC[1])?.slug).to.equal('sub-heading-1-1');
   });
 });
