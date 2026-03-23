@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/ReSee-Movies/utilities/compare/1.0.1...1.0.2) (2026-03-23)
+
+### Bug Fixes
+
+* **generateTableOfContents:** crawl through nested content objects to find headers, instead of only scanning the top level ([dacb273](https://github.com/ReSee-Movies/utilities/commit/dacb273bce1db63af86dc7bd4cfd90eebe88a6d4))
+* **generateTableOfContents:** do not mutate source objects, just in case they are immutable ([6e5bfe5](https://github.com/ReSee-Movies/utilities/commit/6e5bfe5648c89c182ae1b10fcf65c757d254d965))
+* **generateTableOfContents:** guard when invoking DOM libs so method does not break in non-DOM contexts ([679ff25](https://github.com/ReSee-Movies/utilities/commit/679ff259647dda07d094517f2ebe0fed053d2fea))
+
 ## [1.0.1](https://github.com/ReSee-Movies/utilities/compare/1.0.0...1.0.1) (2026-02-24)
 
 ### Bug Fixes
