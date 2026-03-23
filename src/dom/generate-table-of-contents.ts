@@ -80,14 +80,21 @@ export function generateTableOfContents<S extends TableOfContentsSource>(
   if (isString(source)) {
     headings = extractStringSourceHeadings(source);
   }
-  else if (source instanceof HTMLElement) {
-    headings = extractElementSourceHeadings(source);
-  }
   else if (Array.isArray(source)) {
     headings = extractObjectSourceHeadings(source);
   }
   else {
-    return { tableOfContents: [], contentSource: source };
+    try {
+      if (source instanceof HTMLElement) {
+        headings = extractElementSourceHeadings(source);
+      }
+      else {
+        return { tableOfContents: [], contentSource: source };
+      }
+    }
+    catch {
+      return { tableOfContents: [], contentSource: source };
+    }
   }
 
   const tableOfContents = [] as TableOfContents[];
