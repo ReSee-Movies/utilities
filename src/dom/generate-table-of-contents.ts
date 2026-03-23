@@ -5,23 +5,17 @@ import { slugify } from '../strings/slugify.js';
 
 
 /**
- * The shape of heading entries that are created by tools like the
+ * A shape mashup of objects that are created by tools like the
  * Codex or EditorJS block content editors.
  */
 export type TableOfContentsObjectSource = {
-  type : 'heading';
-  id?  : string;
-  data : { content: string; level: number };
-} | {
-  type : 'header',
-  id?  : string;
-  data : { text: string; level: number },
-} | {
-  type    : 'header';
-  id?     : string;
-  attrs   : { level: number };
-  content : { type: string; text?: string }[];
-};
+  type     : string;
+  id?      : string;
+  attrs?   : { level?: number } & Record<string, unknown>;
+  data?    : { content?: string; text?: string; level?: number } & Record<string, unknown>;
+  text?    : string;
+  content? : TableOfContentsObjectSource[];
+}
 
 /**
  * Config for the {@link generateTableOfContents} method.
@@ -242,9 +236,47 @@ function extractElementSourceHeadings(source: HTMLElement) {
  * by the Codex or EditorJS block content editors.
  */
 function extractObjectSourceHeadings(source: TableOfContentsObjectSource[]) {
-  const results: HeadingInfo[] = [];
+  const headingInfo: HeadingInfo[] = [];
 
-  for (const entry of source) {
+  // Recursively crawl for all heading definitions.
+  const crawlForHeadingObjects = (contents: TableOfContentsObjectSource[]): TableOfContentsObjectSource[] => {
+    return contents
+      .flatMap((entry) => {
+        if (entry.type === 'heading' || entry.type === 'header') {
+          return entry as TableOfContentsObjectSource;
+        }
+
+        if (Array.isArray(entry.content) && entry.content.length) {
+          return crawlForHeadingObjects(entry.content);
+        }
+
+        return undefined;
+      })
+      .filter((entry) => !!entry);
+  };
+
+  // Recursively extract text content.
+  // NOTE: There is a known limitation here in that some editors will inline certain elements
+  // such as anchors, strong, and italics, directly into the "text". Currently, this does nothing
+  // to filter out such things.
+  const extractHeadingText = (contents: TableOfContentsObjectSource): string => {
+    if (Array.isArray(contents.content) && contents.content.length) {
+      return contents.content.flatMap((entry) => extractHeadingText(entry)).join('');
+    }
+
+    if ('text' in contents) {
+      return contents.text ?? '';
+    }
+
+    if ('data' in contents) {
+      return contents.data?.text ?? contents.data?.content ?? '';
+    }
+
+    return '';
+  };
+
+
+  for (const entry of crawlForHeadingObjects(source)) {
     const result: HeadingInfo = {
       level : NaN,
       text  : '',
@@ -255,23 +287,16 @@ function extractObjectSourceHeadings(source: TableOfContentsObjectSource[]) {
       },
     };
 
-    if (entry.type === 'heading') {
-      result.level = entry.data.level;
-      result.text  = entry.data.content || '';
-      result.slug  = result.text ? slugify(result.text) : nanoid(10);
-    }
-    else if (entry.type === 'header') {
-      result.level = 'attrs' in entry ? entry.attrs.level : entry.data.level;
-      result.text  = 'data' in entry ? entry.data.text : entry.content.map((item) => item.text).join('');
-      result.slug  = result.text ? slugify(result.text) : nanoid(10);
-    }
+    result.level = entry.attrs?.level ?? entry.data?.level ?? NaN;
+    result.text  = extractHeadingText(entry);
+    result.slug  = result.text ? slugify(result.text) : nanoid(10);
 
     if (result.level) {
-      results.push(result);
+      headingInfo.push(result);
     }
   }
 
-  return results;
+  return headingInfo;
 }
 
 
