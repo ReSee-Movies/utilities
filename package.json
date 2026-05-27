@@ -15,6 +15,7 @@
     "./arrays/*": "./dist/arrays/*.js",
     "./dates/*": "./dist/dates/*.js",
     "./dom/*": "./dist/dom/*.js",
+    "./functions/*": "./dist/functions/*.js",
     "./geo/*": "./dist/geo/*.js",
     "./images/*": "./dist/images/*.js",
     "./numbers/*": "./dist/numbers/*.js",
