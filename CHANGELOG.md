@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/ReSee-Movies/utilities/compare/1.0.2...1.1.0) (2026-05-28)
+
+### Features
+
+* **detectSwipeEvent:** introduced new function `detectSwipeEvent()` which loosly behaves like an event listener that can detect swipe gesture direction via pointer events ([d1c0e91](https://github.com/ReSee-Movies/utilities/commit/d1c0e91a7805cc86953ef23678d857dc79eff1b4))
+* **hasDom:** introduced new function `hasDom()` to check for window and window.document in a compact, not-explody way ([a66799e](https://github.com/ReSee-Movies/utilities/commit/a66799eeb159e3a1096803627a9809a574e03c8e))
+* **throttle:** introduced new function `throttle()` to create a function which wraps another and limits calls to it ([42beeea](https://github.com/ReSee-Movies/utilities/commit/42beeeaacb67db531d86f57c83f9075fb07f3643))
+
 ## [1.0.2](https://github.com/ReSee-Movies/utilities/compare/1.0.1...1.0.2) (2026-03-23)
 
 ### Bug Fixes
