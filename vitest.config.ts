@@ -2,12 +2,18 @@ import { playwright } from '@vitest/browser-playwright';
 import { resolve } from 'node:path';
 import { coverageConfigDefaults, defineConfig } from 'vitest/config';
 
+// @ts-ignore - Update tsconfig to support separate src & test projects via references
+import PointerEventCommands from './tests/vitest-plugins/pointer-event-command';
+
+
 export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, './src/'),
     },
   },
+
+  plugins: [PointerEventCommands()],
 
   test: {
     disableConsoleIntercept: false,
@@ -27,15 +33,15 @@ export default defineConfig({
         extends : true,
         test    : {
           name    : 'unit',
-          include : ['tests/**/*.test.ts'],
-          exclude : ['tests/**/*.dom.test.ts'],
+          include : ['tests/modules/**/*.test.ts'],
+          exclude : ['tests/modules/**/*.dom.test.ts'],
         },
       },
       {
         extends : true,
         test    : {
           name    : 'dom',
-          include : ['tests/**/*.dom.test.ts'],
+          include : ['tests/modules/**/*.dom.test.ts'],
           browser : {
             provider  : playwright(),
             enabled   : true,
